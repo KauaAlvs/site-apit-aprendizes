@@ -1,0 +1,18 @@
+# Arquivos PHP (Proteção de senhas, credenciais SMTP e PHPMailer)
+*.php
+
+# Dependências do PHP (Caso tenha usado Composer para instalar o PHPMailer)
+vendor/
+composer.lock
+
+# Arquivos de variáveis de ambiente (Boas práticas de segurança)
+.env
+.env.local
+
+# Arquivos de sistema (Mac/Windows)
+.DS_Store
+Thumbs.db
+
+# Logs de erro
+error_log
+*.log
