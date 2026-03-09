@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>APIT | Conectando Jovens ao Futuro Profissional</title>
+    <meta name="description"
+        content="A APIT (Associação Promotora de Instrução e Trabalho) qualifica e integra jovens de 14 a 24 anos ao mercado de trabalho através do programa Jovem Aprendiz.">
+
+    <meta property="og:title" content="APIT | Conectando Jovens ao Futuro Profissional">
+    <meta property="og:description"
+        content="A APIT qualifica e integra jovens de 14 a 24 anos ao mercado de trabalho através do programa Jovem Aprendiz.">
+    <meta property="og:image" content="https://www.apitaprendiz.org.br/og-image.jpg">
+    <meta property="og:url" content="https://www.apitaprendiz.org.br/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lupa.css">
+
+    <script>
+        (function (w, d, e, u, f, l, n) {
+            w[f] = w[f] || function () {
+                (w[f].q = w[f].q || [])
+                    .push(arguments);
+            }, l = d.createElement(e), l.async = 1, l.src = u,
+                n = d.getElementsByTagName(e)[0], n.parentNode.insertBefore(l, n);
+        })
+            (window, document, 'script', 'https://assets.mailerlite.com/js/universal.js', 'ml');
+        ml('account', '1905511');
+    </script>
+</head>
+
+<body>
+
+    <div class="search-overlay">
+        <button class="search-overlay-close" aria-label="Fechar busca">&times;</button>
+        <div class="search-overlay-content">
+            <form class="overlay-search-form" id="overlay-search-form" role="search">
+                <input type="text" id="overlay-search-input" placeholder="O que você procura? (ex: 'vagas', 'dúvidas')">
+                <button type="submit" aria-label="Buscar">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="header-logo">
+                <img src="imagens/LOGO-APIT_Transparente (003).png" alt="APIT Logo"> </a>
+            <div class="header-right">
+                <button class="search-icon" aria-label="Abrir busca">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Abrir menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Quem Somos</a></li>
+                        <li><a href="aprendiz.html" class="nav-link">Seja Aprendiz</a></li>
+                        <li><a href="empresas.html" class="nav-link">Para Empresas</a></li>
+                        <li><a href="ajuda.html" class="nav-link">Central de Ajuda</a></li>
+                        <li><a href="https://portal.apitaprendiz.org.br/baixar" class="nav-link"
+                                target="_blank">Portal</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero-carousel">
+            <div class="swiper heroSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url('imagens/hero-bg-2.png');">
+                        <div class="slide-content slide-content-left">
+                            <h1>Conectando <span class="highlight-yellow">talentos</span> a grandes oportunidades.</h1>
+                            <p>Qualificamos jovens para o mercado de trabalho, transformando vidas e fortalecendo
+                                empresas.</p>
+                            <div class="hero-buttons">
+                                <a href="aprendiz.html" class="btn btn-primary main-nav-link">Sou Jovem Aprendiz</a>
+                                <a href="empresas.html" class="btn btn-secondary main-nav-link">Sou Empresa</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url('imagens/hero-bg-1.png');">
+                        <div class="slide-content slide-content-right animate-on-scroll fade-in">
+                            <h1>A força que nos move: <br><span class="highlight-yellow">O primeiro passo.</span></h1>
+                            <p>Mais de 10 anos dedicados a criar um futuro melhor para jovens.</p>
+                            <div class="hero-buttons">
+                                <a href="#quem-somos" class="btn btn-primary">Nossa História</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+        <section class="section-impact premium-impact">
+            <div class="container">
+                <div class="impact-header text-center animate-on-scroll slide-in-up">
+                    <span class="section-tag tag-light">Nossos Números</span>
+                    <h2>Faça parte deste <span class="highlight-yellow">impacto</span> e desta <span
+                            class="highlight-green">jornada</span></h2>
+                </div>
+
+                <div class="impact-grid" id="impact-counters">
+                    <div class="impact-card animate-on-scroll slide-in-up" style="--delay: 0.1s;">
+                        <div class="impact-icon-wrapper"><i class="fas fa-users"></i></div>
+                        <div class="impact-data">
+                            <h3 id="count-jovens" data-goal="10000">0</h3>
+                            <p>Adolescentes e jovens<br>impactados</p>
+                        </div>
+                    </div>
+                    <div class="impact-card animate-on-scroll slide-in-up" style="--delay: 0.2s;">
+                        <div class="impact-icon-wrapper"><i class="fas fa-user-graduate"></i></div>
+                        <div class="impact-data">
+                            <h3 id="count-atendidos" data-goal="15000">0</h3>
+                            <p>Atendidos desde a<br>nossa criação</p>
+                        </div>
+                    </div>
+                    <div class="impact-card animate-on-scroll slide-in-up" style="--delay: 0.3s;">
+                        <div class="impact-icon-wrapper"><i class="fas fa-briefcase"></i></div>
+                        <div class="impact-data">
+                            <h3 id="count-vagas" data-goal="5000">0</h3>
+                            <p>Encaminhamentos para<br>oportunidades</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quem-somos" class="section-about-premium">
+            <div class="about-premium-image animate-on-scroll fade-in">
+                <img src="imagens/capacitação.png" alt="Jovens aprendizes em capacitação">
+                <div class="image-overlay"></div>
+            </div>
+
+            <div class="container about-premium-content-wrapper">
+                <div class="about-premium-card animate-on-scroll slide-in-up">
+                    <span class="section-tag">Sobre a APIT</span>
+                    <h2>Educando e <span class="highlight-blue">empregando</span> jovens há mais de 10 anos.</h2>
+                    <p>A APIT (Associação Promotora de Instrução e Trabalho) foi criada para incentivar a inclusão de
+                        aprendizes adolescentes no mundo do trabalho, aplicando a Lei 10.097.</p>
+                    <p>Focamos na <strong>qualificação e inclusão do jovem no mercado</strong>, com
+                        ética, excelência e responsabilidade social.</p>
+                </div>
+
+                <div class="about-cards premium-grid">
+                    <div class="flip-card animate-on-scroll fade-in" style="--delay: 0.1s;">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-bullseye"></i>
+                                <h3>Missão</h3>
+                                <p class="flip-card-helper-mobile">(Toque para ver)</p>
+                                <p class="flip-card-helper-desktop">(Passe o mouse)</p>
+
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Missão</h3>
+                                <p>Contribuir para a capacitação profissional da juventude e exercício da cidadania.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card animate-on-scroll fade-in" style="--delay: 0.2s;">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-eye"></i>
+                                <h3>Visão</h3>
+                                <p class="flip-card-helper-mobile">(Toque para ver)</p>
+                                <p class="flip-card-helper-desktop">(Passe o mouse)</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Visão</h3>
+                                <p>Ser a melhor instituição na interação educação-trabalho na Região Oeste de SP.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card animate-on-scroll fade-in" style="--delay: 0.3s;">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-gem"></i>
+                                <h3>Valores</h3>
+                                <p class="flip-card-helper-mobile">(Toque para ver)</p>
+                                <p class="flip-card-helper-desktop">(Passe o mouse)</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Valores</h3>
+                                <p>Responsabilidade Social, Ética, Transparência, Aprimoramento Contínuo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="programas" class="section-programs">
+            <div class="container">
+                <span class="section-tag text-center animate-on-scroll fade-in">Nossas Soluções</span>
+                <h2 class="text-center animate-on-scroll fade-in">Um ecossistema de <span
+                        class="highlight-blue">oportunidades</span></h2>
+
+                <div class="programs-wrapper">
+                    <div class="tab-navigation animate-on-scroll fade-in">
+                        <h3 class="tab-nav-item active" data-tab="tab-jovens">
+                            <i class="fas fa-user"></i> Para Jovens
+                        </h3>
+                        <h3 class="tab-nav-item" data-tab="tab-empresas">
+                            <i class="fas fa-building"></i> Para Empresas
+                        </h3>
+                    </div>
+
+                    <div class="tab-panels-area glass-panel">
+                        <div class="tab-panel active" data-tab="tab-jovens">
+                            <div class="panel-content-flex">
+                                <div class="panel-text-side">
+                                    <h3>Inicie sua Jornada Profissional</h3>
+                                    <p>O Programa Jovem Aprendiz é a sua porta de entrada para o mercado de trabalho. Na
+                                        APIT, oferecemos capacitação teórica e prática.</p>
+                                    <ul class="premium-list">
+                                        <li><span class="list-icon"><i class="fas fa-check"></i></span><span>Capacitação
+                                                <strong>gratuita</strong> e de qualidade.</span></li>
+                                        <li><span class="list-icon"><i
+                                                    class="fas fa-check"></i></span><span>Encaminhamento para vagas em
+                                                <strong>grandes empresas</strong>.</span></li>
+                                        <li><span class="list-icon"><i
+                                                    class="fas fa-check"></i></span><span>Acompanhamento profissional e
+                                                pedagógico.</span></li>
+                                    </ul>
+                                    <a href="aprendiz.html" class="btn btn-primary">Quero ser Aprendiz</a>
+                                </div>
+                                <div class="panel-image-side animate-on-scroll slide-in-right">
+                                    <img src="imagens/aprendizes aula.png" alt="Jovens APIT">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-panel" data-tab="tab-empresas">
+                            <div class="panel-content-flex">
+                                <div class="panel-text-side">
+                                    <h3>Contrate Aprendizes com a APIT</h3>
+                                    <p>Cumpra a cota de aprendizagem (Lei 10.097/00) com segurança e fortaleça sua
+                                        equipe.</p>
+                                    <ul class="premium-list">
+                                        <li><span class="list-icon"><i class="fas fa-check"></i></span><span>Gestão
+                                                completa do processo seletivo.</span></li>
+                                        <li><span class="list-icon"><i class="fas fa-check"></i></span><span>Garantia de
+                                                formação teórica alinhada à prática.</span></li>
+                                        <li><span class="list-icon"><i class="fas fa-check"></i></span><span>Fortaleça
+                                                sua marca empregadora.</span></li>
+                                    </ul>
+                                    <a href="empresas.html" class="btn btn-primary">Quero Contratar</a>
+                                </div>
+                                <div class="panel-image-side animate-on-scroll slide-in-right">
+                                    <img src="imagens/reunião.png" alt="Reunião de negócios">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="all-programs-cta text-center animate-on-scroll slide-in-up"
+                    style="margin-top: 4rem; background: #fff; padding: 2.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow-light);">
+                    <h3 style="color: var(--color-primary-blue); font-size: 1.5rem; margin-bottom: 0.5rem;">Quer
+                        conhecer nossa Metodologia Completa?</h3>
+                    <p style="margin-bottom: 1.5rem; color: #555;">Descubra os detalhes da nossa grade curricular e como
+                        estruturamos a formação dos nossos jovens para o sucesso.</p>
+                    <a href="programas.html" class="btn"
+                        style="background-color: var(--color-primary-blue); color: #fff; box-shadow: var(--shadow-medium);">Conhecer
+                        Todos os Programas</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="parceiros" class="section-partners">
+            <div class="container">
+                <h2 class="text-center animate-on-scroll fade-in">Empresas que <span
+                        class="highlight-green">confiam</span> na APIT</h2>
+
+                <div class="swiper logosSwiper animate-on-scroll fade-in">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="imagens/parceiros/papamike.png" alt="Logo Papa Mike"></div>
+                        <div class="swiper-slide"><img src="imagens/parceiros/sabin.png" alt="Logo Albert Sabin"></div>
+                        <div class="swiper-slide"><img src="imagens/parceiros/Anhanguera.png" alt="Logo Anhanguera">
+                        </div>
+                        <div class="swiper-slide"><img src="imagens/parceiros/geofix.png" alt="Logo Geofix"></div>
+                        <div class="swiper-slide"><img src="imagens/parceiros/controle.png" alt="Logo Controle"></div>
+                        <div class="swiper-slide"><img src="imagens/parceiros/amaro.png" alt="Logo Amaro"></div>
+                        <div class="swiper-slide"><img src="imagens/parceiros/vital.png" alt="Logo Vital Brazil"></div>
+                        <div class="swiper-slide"><img src="imagens/parceiros/dan.png" alt="Logo Vital Brazil"></div>
+                    </div>
+                </div>
+                <div class="swiper-button-next logos-arrow"></div>
+                <div class="swiper-button-prev logos-arrow"></div>
+            </div>
+        </section>
+
+        <section id="blog" class="section-blog">
+            <div class="container">
+                <div class="blog-layout animate-on-scroll fade-in">
+                    <div class="blog-graphic-side">
+                        <img src="imagens/noticias-e-historias.png" alt="Notícias e Histórias APIT">
+                    </div>
+                    <div class="blog-grid-side">
+                        <div class="swiper blogSwiper">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <div class="blog-card animate-on-scroll slide-in-up" style="--delay: 0.1s;">
+                                        <a href="https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2025/outubro/aprendizagem-profissional-bate-novo-recorde-com-mais-de-695-mil-contratos-ativos-no-brasil"
+                                            target="_blank" class="blog-card-image-link">
+                                            <img src="imagens/blog-image-1.png" alt="Notícia 1" class="blog-card-image">
+                                        </a>
+                                        <div class="blog-card-content">
+                                            <span class="blog-card-tag">Notícias</span>
+                                            <h3>Aprendizagem profissional bate novo recorde com mais de 695 mil
+                                                contratos</h3>
+                                            <a href="https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2025/outubro/aprendizagem-profissional-bate-novo-recorde-com-mais-de-695-mil-contratos-ativos-no-brasil"
+                                                target="_blank" class="btn-link">Leia mais <i
+                                                    class="fas fa-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="blog-card animate-on-scroll slide-in-up" style="--delay: 0.2s;">
+                                        <a href="https://www.gov.br/secom/pt-br/assuntos/noticias/2025/11/numero-de-jovens-aprendizes-bate-recorde-pelo-setimo-mes-consecutivo"
+                                            target="_blank" class="blog-card-image-link">
+                                            <img src="imagens/blog-image-2.png" alt="Notícia 2" class="blog-card-image">
+                                        </a>
+                                        <div class="blog-card-content">
+                                            <span class="blog-card-tag">Mercado</span>
+                                            <h3>Número de jovens aprendizes bate recorde pelo sétimo mês consecutivo
+                                            </h3>
+                                            <a href="https://www.gov.br/secom/pt-br/assuntos/noticias/2025/11/numero-de-jovens-aprendizes-bate-recorde-pelo-setimo-mes-consecutivo"
+                                                target="_blank" class="btn-link">Leia mais <i
+                                                    class="fas fa-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="blog-card animate-on-scroll slide-in-up" style="--delay: 0.3s;">
+                                        <a href="https://noticias.portaldaindustria.com.br/noticias/educacao/industria-tem-mais-de-53-mil-vagas-para-jovens-aprendizes-no-segundo-semestre-de-2025/"
+                                            target="_blank" class="blog-card-image-link">
+                                            <img src="imagens/blog-image-3.png" alt="Notícia 3" class="blog-card-image">
+                                        </a>
+                                        <div class="blog-card-content">
+                                            <span class="blog-card-tag">Empresas</span>
+                                            <h3>Indústria tem mais de 53 mil vagas para jovens aprendizes</h3>
+                                            <a href="https://noticias.portaldaindustria.com.br/noticias/educacao/industria-tem-mais-de-53-mil-vagas-para-jovens-aprendizes-no-segundo-semestre-de-2025/"
+                                                target="_blank" class="btn-link">Leia mais <i
+                                                    class="fas fa-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="blog-card animate-on-scroll slide-in-up" style="--delay: 0.4s;">
+                                        <a href="https://agenciagov.ebc.com.br/noticias/202504/jovens-ganham-espaco-no-mercado-de-trabalho-e-impulsionam-queda-no-desemprego-e-na-informalidade"
+                                            target="_blank" class="blog-card-image-link">
+                                            <img src="imagens/blog-image-4.png" alt="Notícia 4" class="blog-card-image">
+                                        </a>
+                                        <div class="blog-card-content">
+                                            <span class="blog-card-tag">Mercado</span>
+                                            <h3>Jovens ganham espaço no mercado de trabalho e impulsionam queda no
+                                                desemprego</h3>
+                                            <a href="https://agenciagov.ebc.com.br/noticias/202504/jovens-ganham-espaco-no-mercado-de-trabalho-e-impulsionam-queda-no-desemprego-e-na-informalidade"
+                                                target="_blank" class="btn-link">Leia mais <i
+                                                    class="fas fa-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="swiper-pagination blog-pagination"></div>
+                            <div class="swiper-button-next blog-arrow"></div>
+                            <div class="swiper-button-prev blog-arrow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="social" class="section-social">
+            <div class="container">
+                <h2 class="text-center animate-on-scroll fade-in">APIT nas <span class="highlight-blue">Redes
+                        Sociais</span></h2>
+                <div class="social-grid">
+                    <a href="https://www.facebook.com/APITaprendiz/?ref=hl#"
+                        class="social-card social-card-blue animate-on-scroll slide-in-up" style="--delay: 0.1s;">
+                        <span class="social-letter">A</span><i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/apit.aprendiz/"
+                        class="social-card social-card-yellow animate-on-scroll slide-in-up" style="--delay: 0.2s;">
+                        <span class="social-letter">P</span><i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/apit-aprendiz?_l=pt_BR"
+                        class="social-card social-card-green animate-on-scroll slide-in-up" style="--delay: 0.3s;">
+                        <span class="social-letter">I</span><i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCdPeTQpDNFk_StkOnEjNTAw"
+                        class="social-card social-card-red animate-on-scroll slide-in-up" style="--delay: 0.4s;">
+                        <span class="social-letter">T</span><i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="fixed-donation-bar fixed-element">
+        <p>FAÇA PARTE DA APIT. DOE!</p>
+        <a href="doe.html" class="btn btn-donation">FAZER DOAÇÃO!</a>
+    </div>
+
+    <div class="fixed-social-icons fixed-element">
+        <a href="https://www.facebook.com/APITaprendiz/?ref=hl#" aria-label="Facebook" target="_blank"><i
+                class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/apit.aprendiz/" aria-label="Instagram" target="_blank"><i
+                class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/apit-aprendiz?_l=pt_BR" aria-label="LinkedIn" target="_blank"><i
+                class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.youtube.com/channel/UCdPeTQpDNFk_StkOnEjNTAw" aria-label="YouTube" target="_blank"><i
+                class="fab fa-youtube"></i></a>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer-container-new">
+            <div class="footer-col-white">
+                <img src="imagens/LOGO-APIT_Transparente (003).png" alt="APIT Logo" class="footer-logo">
+                <p class="footer-text-line1">Associação Promotora de Instrução e Trabalho</p>
+                <hr class="footer-divider">
+                <p class="footer-text-line2">Transformando vidas pela educação e trabalho.</p>
+            </div>
+            <div class="footer-col-blue">
+                <div class="footer-grid-blue">
+                    <div class="footer-col">
+                        <h4>Navegação</h4>
+                        <ul>
+                            <li><a href="#quem-somos">Quem Somos</a></li>
+                            <li><a href="programas.html">Programas</a></li>
+                            <li><a href="aprendiz.html">Seja Aprendiz</a></li>
+                            <li><a href="empresas.html">Para Empresas</a></li>
+                            <li><a href="ajuda.html">Central de Ajuda</a></li>
+                            <li><a href="politica.html">Política de privacidade</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Contato</h4>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> <span>Rua Natanael Tito Salmon, 42 -
+                                    Osasco/SP</span></li>
+                            <li><i class="fas fa-phone"></i> <span>(11) 93097-2750</span></li>
+                            <li><i class="fas fa-envelope"></i> <span>contato@apitaprendiz.org.br</span></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Siga-nos</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/APITaprendiz/?ref=hl#" aria-label="Facebook"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/apit.aprendiz/" aria-label="Instagram"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/apit-aprendiz?_l=pt_BR" aria-label="LinkedIn"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2026 © APIT. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5511930972750" class="floating-wpp fixed-element" target="_blank"
+        aria-label="Fale Conosco pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div vw class="enabled fixed-element">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/lupa.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Central de Ajuda | APIT</title>
+    <meta name="description"
+        content="Encontre respostas para suas dúvidas sobre os programas de Jovem Aprendiz da APIT, tanto para jovens quanto para empresas.">
+    <meta name="keywords" content="Jovem Aprendiz, APIT, Dúvidas, FAQ, Contato, Ajuda">
+    <meta name="author" content="APIT">
+
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/ajuda.css">
+    <link rel="stylesheet" href="css/lupa.css">
+    <link rel="stylesheet" href="css/flutuante.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="header-logo">
+                <img src="imagens/LOGO-APIT_Transparente (003).png" alt="APIT Logo">
+            </a>
+            <div class="header-right">
+                <button class="search-icon" aria-label="Abrir busca">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Abrir menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <nav class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Quem Somos</a></li>
+                        <li><a href="programas.html" class="nav-link">Programas</a></li>
+                        <li><a href="aprendiz.html" class="nav-link">Seja Aprendiz</a></li>
+                        <li><a href="empresas.html" class="nav-link">Para Empresas</a></li>
+                        <li><a href="ajuda.html" class="nav-link">Central de Ajuda</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="search-overlay">
+        <button class="search-overlay-close" aria-label="Fechar busca">&times;</button>
+        <div class="search-overlay-content">
+            <form class="overlay-search-form" id="overlay-search-form" role="search">
+                <input type="text" id="overlay-search-input" placeholder="O que você procura? (ex: 'vagas', 'dúvidas')">
+                <button type="submit" aria-label="Buscar">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <main>
+        <section class="page-title-ajuda">
+            <div class="container text-center animate-on-scroll fade-in">
+                <h1>Central de Ajuda</h1>
+                <p>Como podemos te ajudar hoje?</p>
+            </div>
+        </section>
+
+        <section class="faq-nav-menu">
+            <div class="container">
+                <h2>Escolha um tópico</h2>
+                <p>Navegue pelas categorias ou role a página.</p>
+                <div class="nav-buttons-container">
+                    <a href="#categoria-programa" class="nav-button">Sobre o Programa</a>
+                    <a href="#categoria-requisitos" class="nav-button">Requisitos</a>
+                    <a href="#categoria-direitos" class="nav-button">Direitos</a>
+                    <a href="#categoria-rotina" class="nav-button">Rotina</a>
+                    <a href="#categoria-contrato" class="nav-button">Contrato</a>
+                    <a href="#categoria-beneficios" class="nav-button">Benefícios</a>
+                    <a href="#categoria-empresas" class="nav-button">Para Empresas</a>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="faq-section">
+            <div class="container">
+                <div class="text-center animate-on-scroll fade-in">
+                    <span class="section-tag">Dúvidas Frequentes</span>
+                    <h2>Perguntas e Respostas</h2>
+                </div>
+
+                <h2 id="categoria-programa" class="faq-category-title animate-on-scroll fade-in">SOBRE O PROGRAMA
+                </h2>
+                <div class="faq-accordion">
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>O que é o Programa Jovem Aprendiz?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>O Jovem Aprendiz é um programa que combina formação teórica com prática profissional,
+                                proporcionando a entrada de jovens no mercado de trabalho com contrato legal e
+                                acompanhamento educacional.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>Qual é o objetivo do Programa Jovem Aprendiz?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>O objetivo é oferecer qualificação profissional, desenvolvimento de habilidades e
+                                experiência real para jovens que buscam sua primeira oportunidade.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>O Programa é pago?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Não. O Jovem Aprendiz é totalmente gratuito para os jovens.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>Jovens com deficiência podem participar?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim. Pessoas com deficiência podem participar do programa sem limite de idade.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>É possível fazer o programa mais de uma vez?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Não. O jovem só pode ter um contrato de aprendizagem na vida, exceções existem apenas em
+                                casos de contrato rescindido por motivos específicos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 id="categoria-requisitos" class="faq-category-title animate-on-scroll fade-in"> REQUISITOS E
+                    INSCRIÇÃO</h2>
+                <div class="faq-accordion">
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>Quais são os requisitos para participar?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Ter entre 14 e 24 anos, estar estudando (caso não tenha concluído o ensino médio) e ter
+                                disponibilidade para cumprir a carga horária.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>Preciso estar estudando para participar?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim, caso ainda não tenha concluído o ensino médio. Quem já concluiu não precisa estar
+                                matriculado.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>Preciso ter experiência anterior?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Não. O programa é destinado justamente para quem nunca trabalhou.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>Como faço para me inscrever?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>O jovem pode se inscrever pelo site da instituição formadora (como APIT), por vagas
+                                divulgadas por empresas ou programas parceiros.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>O que preciso levar para a inscrição?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Documento com foto, CPF, comprovante de residência e escolaridade. Algumas empresas podem
+                                pedir documentos adicionais.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>Como funciona o processo seletivo?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Geralmente envolve cadastro, análise de perfil, entrevista e eventualmente provas ou
+                                dinâmicas de grupo.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>Posso escolher a área em que vou atuar?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Você pode escolher áreas de interesse, mas a vaga final depende das oportunidades
+                                disponíveis na empresa parceira.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 id="categoria-direitos" class="faq-category-title animate-on-scroll fade-in"> DIREITOS DO JOVEM
+                    APRENDIZ</h2>
+                <div class="faq-accordion">
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>Quais são os direitos garantidos por lei?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Contrato CLT, férias remuneradas, FGTS (2%), salário mínimo-hora, vale-transporte, 13º
+                                salário e jornada reduzida.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>O Jovem Aprendiz tem FGTS?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim, com alíquota de 2% do salário.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>O jovem tem direito a 13º salário?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim, assim como qualquer trabalhador contratado pela CLT.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>O jovem tem direito a férias?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim, e elas devem coincidir preferencialmente com as férias escolares.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>O aprendiz recebe vale-transporte?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim. O vale-transporte é obrigatório.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>A empresa pode descontar algo do meu salário?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Somente descontos permitidos em lei, como INSS ou faltas injustificadas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 id="categoria-rotina" class="faq-category-title animate-on-scroll fade-in"> ROTINA DE TRABALHO
+                </h2>
+                <div class="faq-accordion">
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>Qual é a carga horária de um Jovem Aprendiz?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Entre 4 e 6 horas diárias. Jovens que concluíram o ensino médio podem trabalhar até 8
+                                horas (sendo parte curso teórico).</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>O Jovem Aprendiz pode fazer hora extra?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Não. Hora extra é proibida por lei no contrato de aprendizagem.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>Pode trabalhar à noite?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Não. Menores de idade não podem trabalhar no período noturno (22h às 5h).</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>O que o jovem faz na prática?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Atividades administrativas, atendimento, suporte, organização de documentos, rotinas
+                                simples da área em que for contratado.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>Onde acontecem as aulas teóricas?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Nas instituições formadoras parceiras, como APIT, Senac, Espro etc.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>Como funciona o equilíbrio entre estudo e trabalho?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>O horário de trabalho é sempre ajustado para não interferir nas aulas escolares.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 id="categoria-contrato" class="faq-category-title animate-on-scroll fade-in"> CONTRATO E
+                    EFETIVAÇÃO</h2>
+                <div class="faq-accordion">
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>Quanto tempo dura o contrato?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>De 1 a 2 anos, dependendo da empresa e do curso de aprendizagem.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>Posso ser efetivado ao final do contrato?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim. Muitas empresas efetivam aprendizes que se destacam.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>A empresa pode me demitir antes do prazo?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim, mas somente em casos previstos em lei: faltas graves, abandono, desempenho muito
+                                baixo, entre outros.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>O que acontece quando o contrato termina?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>O contrato é encerrado automaticamente, com pagamento de todos os direitos trabalhistas.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>Posso continuar estudando na instituição teórica após o contrato?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Depende da instituição, mas normally o vínculo é apenas durante o programa.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 id="categoria-beneficios" class="faq-category-title animate-on-scroll fade-in"> BENEFÍCIOS DO
+                    PROGRAMA</h2>
+                <div class="faq-accordion">
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>Quais benefícios o jovem recebe?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Salário, vale-transporte, férias remuneradas, FGTS, 13º e formação teórica gratuita.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>O jovem ganha vale-refeição ou alimentação?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Depende da empresa. Não é obrigatório por lei, mas muitas oferecem.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>Existe plano de saúde para aprendizes?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Algumas empresas oferecem, mas não é obrigatório.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>O jovem recebe uniforme?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Se a função exigir, sim. A empresa é responsável por fornecer sem custo.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>O curso teórico precisa ser pago?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Não. Toda formação é gratuita.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 id="categoria-empresas" class="faq-category-title animate-on-scroll fade-in"> PARA EMPRESAS</h2>
+                <div class="faq-accordion">
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>Como minha empresa pode contratar um Jovem Aprendiz?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Basta clicar em "Para empresas" no Menu, e preencher o formulário. Após acordo firmado,
+                                nós da APIT, auxiliaremos na
+                                seleção e formação do jovem.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>Minha empresa é obrigada a contratar aprendizes?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim, empresas de médio e grande porte devem contratar de 5% a 15% dos funcionários em
+                                funções que exigem formação profissional.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>A instituição formadora cuida de todo o processo?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim, desde a seleção até o acompanhamento do jovem e da formação teórica.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>Qual é o custo para a empresa?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>A empresa paga salário, encargos e benefícios do jovem. A formação teórica é de
+                                responsabilidade da instituição parceira.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll slide-in-up">
+                        <button class="faq-question">
+                            <span>O que acontece caso a empresa não cumpra a Lei da Aprendizagem?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Ela pode ser multada pelo Ministério do Trabalho e sofrer sanções administrativas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-cta text-center animate-on-scroll fade-in" style="--delay: 0.5s;">
+                    <p>Não encontrou sua resposta?</p>
+                    <a href="https://wa.me/5511930972750" target="_blank" class="btn-link">
+                        Entre em contato pelo WhatsApp <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="ajuda-newsletter" id="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <span class="section-tag animate-on-scroll fade-in">Fique por Dentro</span>
+                        <h2 class="animate-on-scroll fade-in" style="--delay: 0.1s">Receba Novas Vagas</h2>
+                        <p class="animate-on-scroll fade-in" style="--delay: 0.2s;">Cadastre-se para receber novas
+                            oportunidades, dicas de carreira e novidades da APIT direto no seu e-mail.</p>
+                    </div>
+
+                    <form class="newsletter-form animate-on-scroll fade-in" style="--delay: 0.3s;"
+                        action="https://assets.mailerlite.com/jsonp/1905511/forms/170950368390284581/subscribe"
+                        data-code="" method="post" target="_blank">
+
+                        <div class="form-group">
+                            <label for="newsletter-name" class="sr-only">Nome</label>
+                            <input type="text" id="newsletter-name" name="fields[name]" placeholder="Seu nome"
+                                autocomplete="given-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="newsletter-email" class="sr-only">E-mail</label>
+                            <input type="email" id="newsletter-email" name="fields[email]"
+                                placeholder="Seu melhor e-mail" autocomplete="email" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Inscreva-se!</button>
+
+                        <input type="hidden" name="ml-submit" value="1">
+                        <input type="hidden" name="anticsrf" value="true">
+                    </form>
+                    <p class="newsletter-privacy animate-on-scroll fade-in" style="--delay: 0.4s;">
+                        Respeitamos sua privacidade. Consulte nossa <a href="politica.html" target="_blank">Política de
+                            Privacidade</a>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container-new">
+            <div class="footer-col-white">
+                <img src="imagens/LOGO-APIT_Transparente (003).png" alt="APIT Logo" class="footer-logo">
+                <p class="footer-text-line1">
+                    Associação Promotora de Instrução e Trabalho
+                </p>
+                <hr class="footer-divider">
+                <p class="footer-text-line2">
+                    Transformando vidas pela educação e trabalho.
+                </p>
+            </div>
+            <div class="footer-col-blue">
+                <div class="footer-grid-blue">
+                    <div class="footer-col">
+                        <h4>Navegação</h4>
+                        <ul>
+                            <li><a href="#quem-somos">Quem Somos</a></li>
+                            <li><a href="programas.html">Programas</a></li>
+                            <li><a href="aprendiz.html">Seja Aprendiz</a></li>
+                            <li><a href="empresas.html">Para Empresas</a></li>
+                            <li><a href="ajuda.html">Central de Ajuda</a></li>
+                            <li><a href="politica.html">Política de privacidade</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Contato</h4>
+                        <ul>
+                            <li><i class="fa-solid fa-location-dot"></i><span>Rua Natanael Tito Salmon, 42 -
+                                    Osasco/SP</span></li>
+                            <li><i class="fa-solid fa-phone"></i><span>(11) 93097-2750</span></li>
+                            <li><i class="fa-solid fa-envelope"></i><span>contato@apitaprendiz.org.br</span></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Siga-nos</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/APITaprendiz/?ref=hl#" aria-label="Facebook"
+                                target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/apit.aprendiz/" aria-label="Instagram" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/apit-aprendiz?_l=pt_BR" aria-label="LinkedIn"
+                                target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 APIT. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="#top" class="back-to-top-btn" aria-label="Voltar ao topo" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <a href="https://wa.me/5511930972750" class="floating-wpp" target="_blank" aria-label="Fale Conosco pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <script src="js/ajuda.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/lupa.js" defer></script>
+</body>
+
+</html>

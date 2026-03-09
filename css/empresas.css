@@ -1,0 +1,1714 @@
+/* ================================== */
+/* CSS AUTÔNOMO - PÁGINA EMPRESAS
+/* TEMA: VERMELHO
+/* ================================== */
+
+/* ---------------------------------- */
+/* 1. VARIÁVEIS E RESET GLOBAL
+/* ---------------------------------- */
+
+:root {
+    /* Paleta Vibrante (Padrão do Site) */
+    --color-primary-blue: #005A9C;
+    --color-secondary-green: #34A853;
+    --color-accent-yellow: #FFBF00;
+    --color-accent-red: #EA4335;
+    --color-accent-purple: #7928CA;
+
+    --color-text-dark: #333333;
+    --color-text-light: #FFFFFF;
+    --color-bg-light: #FFFFFF;
+    --color-bg-grey: #f7f9fc;
+
+    --font-main: 'Poppins', sans-serif;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.05);
+    /* Sombra agora é baseada no vermelho */
+    --shadow-medium: 0 8px 25px rgba(234, 67, 53, 0.1);
+    --border-radius: 12px;
+    --transition-fast: 0.2s ease-in-out;
+    --transition-premium: 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: var(--color-accent-yellow);
+    color: var(--color-text-dark);
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+    /* 16px */
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--color-text-dark);
+    line-height: 1.7;
+    background-color: var(--color-bg-grey);
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    word-wrap: break-word;
+}
+
+h1 {
+    font-size: 2.2rem;
+    /* Ajustado para mobile */
+}
+
+h2 {
+    font-size: 1.8rem;
+    /* Ajustado para mobile */
+}
+
+h3 {
+    font-size: 1.1rem;
+    /* Ajustado para mobile */
+}
+
+/* Destaques de texto coloridos (TEMA VERMELHO) */
+.highlight-yellow {
+    color: var(--color-accent-yellow);
+}
+
+.highlight-green {
+    color: var(--color-secondary-green);
+}
+
+.highlight-red {
+    color: var(--color-accent-red);
+}
+
+.highlight-blue {
+    color: var(--color-primary-blue);
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-tag {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-accent-red);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+/* Classe utilitária para acessibilidade (Esconde visualmente) */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* ---------------------------------- */
+/* 2. COMPONENTES (TEMA VERMELHO)
+/* ---------------------------------- */
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-primary {
+    background-color: var(--color-accent-red);
+    color: var(--color-text-light);
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #D03025;
+    /* Vermelho mais escuro */
+    transition: 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.btn-primary:hover::before {
+    width: 100%;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-text-light);
+    border: 2px solid var(--color-text-light);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-text-light);
+    color: var(--color-accent-red);
+    /* Hover para vermelho */
+}
+
+.btn-link {
+    font-weight: 600;
+    color: var(--color-accent-red);
+    transition: var(--transition-fast);
+}
+
+.btn-link:hover {
+    color: var(--color-primary-blue);
+    /* Hover para azul */
+    letter-spacing: 0.5px;
+}
+
+.btn-link i {
+    font-size: 0.8em;
+    margin-left: 4px;
+}
+
+.card {
+    background-color: var(--color-bg-light);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-light);
+    transition: var(--transition-fast);
+    height: 100%;
+}
+
+.card:hover {
+    box-shadow: var(--shadow-medium);
+    transform: scale(1.03);
+}
+
+/* ---------------------------------- */
+/* 3. HEADER E NAVEGAÇÃO
+/* ---------------------------------- */
+
+.header {
+    background-color: var(--color-bg-light);
+    width: 100%;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-light);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo img {
+    height: 50px;
+    /* Reduzido para mobile */
+    width: auto;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-icon {
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-primary-blue);
+    transition: var(--transition-fast);
+}
+
+.search-icon:hover {
+    color: var(--color-accent-red);
+}
+
+.mobile-menu-toggle {
+    display: block;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-primary-blue);
+}
+
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 82px;
+    /* Altura do header (50px logo + 32px padding) */
+    left: 0;
+    width: 100%;
+    background-color: var(--color-bg-light);
+    box-shadow: var(--shadow-medium);
+    padding: 1rem 0;
+}
+
+.nav-menu.active {
+    display: block;
+}
+
+.nav-list {
+    flex-direction: column;
+}
+
+.nav-list li {
+    text-align: center;
+    margin: 0.5rem 0;
+    /* Ajustado para mobile */
+}
+
+.nav-link {
+    font-weight: 600;
+    color: var(--color-primary-blue);
+    padding: 0.75rem 1rem;
+    /* Padding aumentado para toque */
+    position: relative;
+    transition: var(--transition-fast);
+    border-radius: 8px;
+    /* Borda arredondada para o hover */
+    margin: 0 1rem;
+    /* Margem para o hover não colar nas bordas */
+    display: block;
+    /* Garante que o link ocupe a área */
+}
+
+.nav-list li:nth-child(4) a.nav-link {
+    color: var(--color-text-light);
+    background-color: var(--color-accent-red);
+}
+
+.nav-link:hover {
+    color: var(--color-text-light);
+    background-color: var(--color-accent-red);
+    /* <<< MUDANÇA: Hover vermelho */
+}
+
+/* ---------------------------------- */
+/* 4. BUSCA OVERLAY (Padrão)
+/* ---------------------------------- */
+.search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 51, 102, 0.95);
+    /* Azul primário com transparência */
+    z-index: 1999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.search-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.search-overlay-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 3rem;
+    color: var(--color-text-light);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.search-overlay-close:hover {
+    transform: rotate(90deg);
+    color: var(--color-accent-red);
+}
+
+.search-overlay-content {
+    width: 90%;
+    max-width: 700px;
+}
+
+/* ---------------------------------- */
+/* 5. SEÇÕES (ESTILOS PÁGINA EMPRESAS)*/
+/* ---------------------------------- */
+
+main {
+    padding-top: 82px;
+    /* Altura do header mobile */
+}
+
+/* --- Hero Section (Vermelho - ALTERADO) --- */
+.hero-empresas {
+    /* === ALTERAÇÃO: Fundo de Imagem === */
+    /* TROQUE A IMAGEM AQUI */
+    background-image: linear-gradient(rgba(100, 20, 20, 0.75), rgba(50, 10, 10, 0.75)), url('../imagens/hero-empresa.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: var(--color-text-light);
+    padding: 5rem 0;
+    text-align: center;
+    position: relative;
+}
+
+.hero-empresas h1 {
+    font-size: 2.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-empresas p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+/* === NOVO: Wrapper dos Botões do Hero === */
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    /* Empilha no mobile */
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* O .btn-secondary (branco) já funciona bem aqui */
+
+
+/* --- Seção Vantagens (Padrão Cursos) --- */
+.programas-cursos {
+    padding: 4rem 0;
+    background-color: var(--color-bg-grey);
+}
+
+.cursos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.curso-card {
+    background-color: var(--color-bg-light);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    transition: all var(--transition-fast);
+    border-left: 5px solid var(--color-accent-red);
+    text-align: center;
+}
+
+.curso-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+    border-left-width: 10px;
+}
+
+.curso-card i {
+    font-size: 2.5rem;
+    color: var(--color-accent-red);
+    margin-bottom: 1rem;
+    transition: all var(--transition-fast);
+}
+
+.curso-card:hover i {
+    transform: scale(1.1);
+}
+
+.curso-card h3 {
+    color: var(--color-primary-blue);
+    font-size: 1.25rem;
+}
+
+/* --- Seção Como Funciona (Passos) --- */
+.como-funciona {
+    padding: 4rem 0;
+    background-color: var(--color-bg-light);
+}
+
+.passos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.passo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: var(--color-bg-grey);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition-fast);
+}
+
+.passo:hover {
+    box-shadow: var(--shadow-light);
+    transform: translateX(5px);
+}
+
+.passo-numero {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-accent-red);
+    color: var(--color-text-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    box-shadow: 0 0 0 6px var(--color-bg-light);
+}
+
+.passo-texto h3 {
+    color: var(--color-primary-blue);
+    margin-bottom: 0.25rem;
+}
+
+.passo-texto p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+/* ---------------------------------- */
+/* 7. SEÇÃO FORMULÁRIO EMPRESA
+/* ---------------------------------- */
+.formulario-empresas {
+    padding: 4rem 0;
+    background-color: var(--color-bg-light);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Mobile-first: 1 coluna */
+    gap: 1.5rem;
+    margin-top: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-group {
+    margin-bottom: 0;
+    /* Gap do grid vai controlar o espaço */
+    position: relative;
+    /* Para a mensagem de erro */
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-text-dark);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+/* Adicionado TEL */
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-family: var(--font-main);
+    font-size: 1rem;
+    transition: var(--transition-fast);
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-accent-red);
+    box-shadow: 0 0 0 2px rgba(234, 67, 53, 0.2);
+}
+
+/* === NOVOS ESTILOS DE VALIDAÇÃO === */
+.form-group.valid input[type="text"],
+.form-group.valid input[type="tel"] {
+    border-color: var(--color-secondary-green);
+    box-shadow: 0 0 0 2px rgba(52, 168, 83, 0.2);
+}
+
+.form-group.invalid input[type="text"],
+.form-group.invalid input[type="tel"] {
+    border-color: var(--color-accent-red);
+    box-shadow: 0 0 0 2px rgba(234, 67, 53, 0.2);
+}
+
+.form-error-message {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--color-accent-red);
+    margin-top: 0.25rem;
+    min-height: 1.2em;
+    /* Reserva espaço para a mensagem */
+}
+
+/* === FIM DOS ESTILOS DE VALIDAÇÃO === */
+
+.form-group-inline {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    /* Coluna da cidade maior, estado auto */
+    gap: 1.5rem;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-actions {
+    text-align: right;
+    margin-top: 1rem;
+}
+
+
+/* === INÍCIO: ESTILOS UPLOAD (TEMA VERMELHO) === */
+.btn-file-upload {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--color-bg-light);
+    border: 2px dashed var(--color-accent-red);
+    /* Cor do tema */
+    color: var(--color-accent-red);
+    /* Cor do tema */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file-upload:hover {
+    background-color: rgba(234, 67, 53, 0.05);
+    /* Cor do tema */
+    border-style: solid;
+}
+
+.btn-file-upload i {
+    font-size: 1rem;
+}
+
+.btn-file-upload input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    font-size: 100px;
+}
+
+.file-name-display {
+    display: block;
+    margin-top: 0.75rem;
+    font-style: italic;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* === FIM: ESTILOS UPLOAD === */
+
+
+/* ---------------------------------- */
+/* 8. ANIMAÇÕES ON-SCROLL (Padrão)
+/* ---------------------------------- */
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform var(--transition-premium);
+    transition-delay: var(--delay, 0s);
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.animate-on-scroll.fade-in {
+    transform: scale(0.98);
+}
+
+.animate-on-scroll.slide-in-up {
+    transform: translateY(30px) scale(0.98);
+}
+
+.animate-on-scroll.slide-in-left {
+    transform: translateX(-30px) scale(0.98);
+}
+
+.animate-on-scroll.slide-in-right {
+    transform: translateX(30px) scale(0.98);
+}
+
+/* ---------------------------------- */
+/* 9. FAIXA CTA (TEMA VERMELHO)
+/* ---------------------------------- */
+.section-join-banner {
+    /* CORREÇÃO: Fundo azul é melhor para o CTA "Dúvidas?" */
+    background-color: var(--color-primary-blue);
+    color: var(--color-text-light);
+    padding: 3rem 0;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.join-banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.join-banner-image {
+    max-width: 200px;
+}
+
+.join-banner-image img {
+    width: 100%;
+    height: auto;
+}
+
+.join-banner-text-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.join-banner-text h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: var(--color-text-light);
+    /* Garante texto branco */
+}
+
+.join-banner-text p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+/* CORREÇÃO: Botão no fundo azul */
+.join-banner-cta .btn-secondary {
+    border: 2px solid var(--color-accent-yellow);
+    /* Borda amarela */
+    color: var(--color-accent-yellow);
+    background-color: transparent;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.join-banner-cta .btn-secondary:hover {
+    background-color: var(--color-accent-yellow);
+    color: var(--color-primary-blue);
+    /* Texto azul */
+    border-color: var(--color-accent-yellow);
+}
+
+/* ---------------------------------- */
+/* 10. BOTÃO WHATSAPP E RODAPÉ (TEMA VERMELHO) */
+/* ---------------------------------- */
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+
+    70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+.floating-wpp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 998;
+    animation: pulse 2s infinite;
+    transition: var(--transition-fast);
+}
+
+.floating-wpp:hover {
+    animation-play-state: paused;
+    transform: scale(1.15);
+}
+
+
+.footer {
+    background-color: var(--color-accent-red);
+    color: var(--color-text-light);
+    padding: 3rem 0 0;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-container-new {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footer-col-white {
+    background-color: var(--color-bg-light);
+    color: var(--color-text-dark);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    margin: 0 1rem;
+}
+
+.footer-col-white .footer-logo {
+    height: 70px;
+    width: auto;
+    margin-bottom: 1.5rem;
+}
+
+.footer-text-line1 {
+    font-weight: 600;
+    color: var(--color-text-dark);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.footer-divider {
+    border: none;
+    height: 2px;
+    background-color: var(--color-accent-yellow);
+    /* Amarelo (padrão) */
+    width: 50px;
+    margin: 1rem 0;
+}
+
+.footer-text-line2 {
+    font-weight: 700;
+    color: var(--color-accent-red);
+    /* Roxo (padrão) */
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.footer-col-blue {
+    padding: 0 1rem;
+}
+
+.footer-grid-blue {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.footer-col h4 {
+    color: var(--color-text-light);
+    margin-bottom: 1rem;
+    position: relative;
+    font-size: 1.3rem;
+}
+
+.footer-col h4::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: var(--color-accent-yellow);
+    margin-top: 0.25rem;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.6;
+}
+
+.footer-col ul a,
+.footer-col ul span {
+    color: var(--color-text-light);
+    transition: var(--transition-fast);
+}
+
+.footer-col ul a:hover {
+    color: var(--color-accent-yellow);
+}
+
+.footer-col ul i {
+    margin-right: 0.75rem;
+    width: 20px;
+    flex-shrink: 0;
+    text-align: center;
+    margin-top: 4px;
+}
+
+.social-links {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-text-light);
+    border-radius: 50%;
+    transition: var(--transition-fast);
+    font-size: 1.1rem;
+}
+
+.social-links a:hover {
+    background-color: var(--color-accent-yellow);
+    color: var(--color-primary-blue);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 3rem;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+}
+
+/* ---------------------------------- */
+/* 11. ESTILOS DO GOOGLE SEARCH (Padrão) */
+/* ---------------------------------- */
+
+.gcse-search {
+    display: none;
+}
+
+.search-overlay-content .gsc-control-cse {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.search-overlay-content form.gsc-search-box {
+    margin-bottom: 0;
+}
+
+.search-overlay-content table.gsc-search-box {
+    margin-bottom: 0;
+}
+
+.search-overlay-content .gsc-search-box-tools .gsc-search-box .gsc-input {
+    padding: 0;
+}
+
+.search-overlay-content input.gsc-input,
+.search-overlay-content input.gsc-input:focus {
+    background: transparent !important;
+    border: none !important;
+    color: var(--color-text-light) !important;
+    font-family: var(--font-main) !important;
+    font-size: 1.5rem !important;
+    padding: 1rem 0 !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    width: 100% !important;
+}
+
+.search-overlay-content input.gsc-input::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.search-overlay-content .gsc-search-button,
+.search-overlay-content .gsc-search-button:hover,
+.search-overlay-content .gsc-search-button:focus {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 0 0 0.5rem !important;
+    margin-left: 0;
+}
+
+.search-overlay-content .gsc-search-button-v2,
+.search-overlay-content .gsc-search-button-v2:hover,
+.search-overlay-content .gsc-search-button-v2:focus {
+    padding: 0 0 0 0.5rem !important;
+    margin: 0 !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.search-overlay-content .gsc-search-button-v2 svg {
+    fill: var(--color-accent-yellow) !important;
+    width: 22px;
+    height: 22px;
+}
+
+
+/* ---------------------------------- */
+/* 12. ELEMENTOS FIXOS (ADICIONADO) */
+/* ---------------------------------- */
+
+/* 1. BARRA DE DOAÇÃO FIXA */
+.fixed-donation-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    border-top: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    z-index: 995;
+}
+
+.fixed-donation-bar p {
+    margin: 0;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    font-size: 0.9rem;
+}
+
+.btn-donation {
+    background-color: var(--color-secondary-green);
+    color: var(--color-text-light);
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    /* Garante que não é sublinhado */
+}
+
+.btn-donation:hover {
+    background-color: #2a8a44;
+}
+
+/* 2. ÍCONES SOCIAIS FIXOS (TEMA VERMELHO) */
+.fixed-social-icons {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 997;
+    background: rgba(234, 67, 53, 0.8);
+    /* <-- MUDANÇA: Vermelho com transparência */
+    backdrop-filter: blur(5px);
+    border-radius: 8px 0 0 8px;
+    box-shadow: var(--shadow-light);
+}
+
+.fixed-social-icons a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+    transition: var(--transition-fast);
+}
+
+.fixed-social-icons a:hover {
+    background-color: var(--color-accent-yellow);
+    color: var(--color-text-dark);
+}
+
+/* 3. AJUSTES DE ELEMENTOS FLUTUANTES (WPP, VLIBRAS) */
+.floating-wpp {
+    bottom: 80px;
+    /* Sobe 60px para a barra de doação */
+}
+
+div[vw-access-button].active {
+    bottom: 140px !important;
+    /* Sobe 60px (barra) + 60px (WPP) + 20px (espaço) */
+    right: -9px !important;
+    /* Corrigido de -9px */
+    z-index: 999 !important;
+}
+
+/* 4. AJUSTE PADDING DO RODAPÉ */
+.footer {
+    padding-bottom: 60px;
+    /* Altura da barra de doação */
+}
+
+/* ---------------------------------- */
+/* 13. NOVA SEÇÃO NEWSLETTER PREMIUM
+/* ---------------------------------- */
+.empresas-newsletter {
+    padding: 4rem 0;
+    background-color: var(--color-primary-blue);
+    /* Fundo azul */
+    color: var(--color-text-light);
+}
+
+.newsletter-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.newsletter-text .section-tag {
+    color: var(--color-accent-yellow);
+    /* Tag amarela no fundo azul */
+}
+
+.newsletter-text h2 {
+    color: var(--color-text-light);
+    font-size: 2rem;
+}
+
+.newsletter-text p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.newsletter-form .form-group {
+    margin-bottom: 0;
+}
+
+.newsletter-form input[type="text"],
+.newsletter-form input[type="email"] {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-bg-light);
+    border-radius: 8px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    width: 100%;
+}
+
+.newsletter-form input[type="text"]:focus,
+.newsletter-form input[type="email"]:focus {
+    outline: none;
+    border-color: var(--color-accent-yellow);
+    box-shadow: 0 0 0 3px rgba(255, 191, 0, 0.3);
+}
+
+/* Botão da newsletter (amarelo) */
+.newsletter-form .btn {
+    padding: 0.9rem;
+    font-size: 1rem;
+    background-color: var(--color-accent-yellow);
+    color: var(--color-text-dark);
+}
+
+/* O .btn-primary aqui é amarelo, não vermelho */
+.newsletter-form .btn-primary::before {
+    background: #e6ac00;
+    /* Amarelo escuro */
+}
+
+.newsletter-form .btn:hover {
+    background-color: #ffce3d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter-privacy {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.newsletter-privacy a {
+    color: var(--color-text-light);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.newsletter-privacy a:hover {
+    color: var(--color-accent-yellow);
+}
+
+
+/* ---------------------------------- */
+/* 14. MEDIA QUERIES (DESKTOP)
+/* ---------------------------------- */
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    /* Header Desktop */
+    .header-logo img {
+        height: 70px;
+    }
+
+    main {
+        padding-top: 102px;
+    }
+
+    .nav-menu {
+        display: block;
+        position: static;
+        width: auto;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+        top: auto;
+    }
+
+    .mobile-menu-toggle {
+        display: none;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .nav-list li {
+        margin: 0;
+    }
+
+    /* === MENU DESKTOP (PÍLULA) (TEMA VERMELHO) === */
+    .nav-link {
+        padding: 0.5rem 1.2rem;
+        border-radius: 50px;
+        border: 2px solid;
+        background: transparent;
+        z-index: 1;
+        overflow: hidden;
+        margin: 0;
+        display: inline-block;
+    }
+
+    .nav-link:hover {
+        background: transparent;
+    }
+
+    .nav-link::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        z-index: -1;
+        transition: width 0.3s ease-out;
+        background-color: #ccc;
+    }
+
+    .nav-link:hover::before {
+        width: 100%;
+    }
+
+    /* 1: Quem Somos (Azul) */
+    .nav-list li:nth-child(1) a.nav-link {
+        border-color: var(--color-primary-blue);
+        color: var(--color-primary-blue);
+    }
+
+    .nav-list li:nth-child(1) a.nav-link::before {
+        background-color: var(--color-primary-blue);
+    }
+
+    .nav-list li:nth-child(1) a.nav-link:hover {
+        color: var(--color-text-light);
+    }
+
+    /* 2: Programas (Verde) */
+    .nav-list li:nth-child(2) a.nav-link {
+        border-color: var(--color-secondary-green);
+        color: var(--color-secondary-green);
+    }
+
+    .nav-list li:nth-child(2) a.nav-link::before {
+        background-color: var(--color-secondary-green);
+    }
+
+    .nav-list li:nth-child(2) a.nav-link:hover {
+        color: var(--color-text-light);
+    }
+
+    /* 3: Seja Aprendiz (ROXO) */
+    .nav-list li:nth-child(3) a.nav-link {
+        border-color: var(--color-accent-purple);
+        color: var(--color-accent-purple);
+    }
+
+    .nav-list li:nth-child(3) a.nav-link::before {
+        background-color: var(--color-accent-purple);
+    }
+
+    .nav-list li:nth-child(3) a.nav-link:hover {
+        color: var(--color-text-light);
+    }
+
+    /* 4: Para Empresas (Vermelho) - ATIVO */
+    .nav-list li:nth-child(4) a.nav-link {
+        border-color: var(--color-accent-red);
+        background-color: var(--color-accent-red);
+        color: var(--color-text-light);
+    }
+
+    .nav-list li:nth-child(4) a.nav-link::before {
+        width: 100%;
+        /* << PÍLULA ATIVA */
+        background-color: var(--color-accent-red);
+    }
+
+    .nav-list li:nth-child(4) a.nav-link:hover {
+        color: var(--color-text-light);
+    }
+
+    /* 5: Central de Ajuda (Amarelo) */
+    .nav-list li:nth-child(5) a.nav-link {
+        border-color: var(--color-accent-yellow);
+        color: var(--color-accent-yellow);
+    }
+
+    .nav-list li:nth-child(5) a.nav-link::before {
+        background-color: var(--color-accent-yellow);
+    }
+
+    .nav-list li:nth-child(5) a.nav-link:hover {
+        color: var(--color-text-dark);
+    }
+
+    /* Hero Desktop */
+    .hero-empresas {
+        padding: 7rem 0;
+        /* Aumentado */
+    }
+
+    .hero-empresas h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-empresas p {
+        font-size: 1.25rem;
+    }
+
+    /* NOVO: Botões do Hero lado a lado */
+    .hero-buttons {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    /* Busca Desktop */
+    .search-overlay-content input.gsc-input,
+    .search-overlay-content input.gsc-input:focus {
+        font-size: 2.5rem !important;
+    }
+
+    .search-overlay-content .gsc-search-button-v2 svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Grid de Vantagens (2 colunas) */
+    .cursos-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Passos (Como Funciona) Desktop */
+    .passos-container {
+        flex-direction: row;
+        /* Lado a lado */
+        gap: 1rem;
+        max-width: none;
+        /* Largura total */
+        margin-top: 3rem;
+    }
+
+    .passo {
+        flex-direction: column;
+        /* Número em cima, texto embaixo */
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+        flex: 1;
+        /* Ocupa espaço igual */
+        background: var(--color-bg-light);
+        /* Fundo branco */
+        border: 1px solid #eee;
+    }
+
+    .passo-numero {
+        box-shadow: none;
+        /* Remove a sombra do mobile */
+    }
+
+    /* Formulário Desktop (Layout de Grid) */
+    .form-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem 2rem;
+        /* Layout atualizado com CNPJ e Ramo */
+        grid-template-areas:
+            "empresa       representante"
+            "cnpj          ramo"
+            "interesse     como"
+            "telefone      email"
+            "rua           bairro"
+            "cidade-estado anexo"
+            "mensagem      mensagem"
+            ".             actions";
+        /* Ponto alinha o botão à direita */
+    }
+
+    /* Atribui cada item à sua área */
+    .form-group.fg-empresa {
+        grid-area: empresa;
+    }
+
+    .form-group.fg-representante {
+        grid-area: representante;
+    }
+
+    .form-group.fg-cnpj {
+        grid-area: cnpj;
+    }
+
+    .form-group.fg-ramo {
+        grid-area: ramo;
+    }
+
+    .form-group.fg-interesse {
+        grid-area: interesse;
+    }
+
+    .form-group.fg-como {
+        grid-area: como;
+    }
+
+    .form-group.fg-telefone {
+        grid-area: telefone;
+    }
+
+    .form-group.fg-email {
+        grid-area: email;
+    }
+
+    .form-group.fg-rua {
+        grid-area: rua;
+    }
+
+    .form-group.fg-bairro {
+        grid-area: bairro;
+    }
+
+    .form-group.fg-cidade-estado {
+        grid-area: cidade-estado;
+    }
+
+    .form-group.fg-anexo {
+        grid-area: anexo;
+    }
+
+    .form-group.fg-mensagem {
+        grid-area: mensagem;
+    }
+
+    .form-actions.fg-actions {
+        grid-area: actions;
+    }
+
+    .form-actions {
+        margin-top: 0;
+    }
+
+    .form-group-inline {
+        gap: 1rem;
+    }
+
+    /* ------ Fim do layout do formulário ------ */
+
+
+    /* Faixa CTA ("Tem Dúvidas?") Desktop - CORRIGIDO */
+    .section-join-banner {
+        padding: 4rem 0;
+    }
+
+    .join-banner-content {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .join-banner-image {
+        flex-basis: 300px;
+        /* Tamanho melhor */
+        max-width: 300px;
+    }
+
+    .join-banner-text-cta {
+        flex: 1;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .join-banner-text p {
+        margin: 0;
+    }
+
+    /* Newsletter Desktop - NOVO */
+    .newsletter-text {
+        text-align: left;
+    }
+
+    .newsletter-content {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        text-align: left;
+    }
+
+    .newsletter-form {
+        flex-direction: row;
+        align-items: center;
+        flex-grow: 1;
+        min-width: 500px;
+    }
+
+    .newsletter-form .form-group {
+        flex-grow: 1;
+    }
+
+    .newsletter-form .btn {
+        flex-shrink: 0;
+    }
+
+    .newsletter-privacy {
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+
+    .newsletter-text h2 {
+        font-size: 2.2rem;
+    }
+
+
+    /* Rodapé Desktop */
+    .footer {
+        padding-top: 4rem;
+    }
+
+    .footer-container-new {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 3rem;
+        padding-bottom: 4rem;
+    }
+
+    .footer-col-white {
+        flex: 0 0 30%;
+        margin: 0;
+        padding: 2.5rem;
+    }
+
+    .footer-col-white .footer-logo {
+        height: 70px;
+    }
+
+    .footer-col-blue {
+        flex: 1;
+        padding: 0;
+    }
+
+    .footer-grid-blue {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-col h4 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-col ul li {
+        margin-bottom: 0.75rem;
+        font-size: 0.95rem;
+    }
+
+    .social-links {
+        margin-top: 0;
+    }
+
+    .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
+    }
+
+    .footer-bottom {
+        margin-top: 0;
+        padding: 2.5rem 0;
+        font-size: 0.9rem;
+    }
+
+    /* Ajustes flutuantes para desktop */
+    .fixed-donation-bar {
+        flex-direction: row;
+        gap: 1.5rem;
+        padding: 0.75rem 1rem;
+        height: 70px;
+    }
+
+    .fixed-donation-bar p {
+        font-size: 1rem;
+    }
+
+    .btn-donation {
+        padding: 0.75rem 1.75rem;
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        padding-bottom: 70px;
+        /* Altura da barra no desktop */
+    }
+
+    .floating-wpp {
+        bottom: 90px;
+        /* 20px + 70px da barra */
+    }
+
+    div[vw-access-button].active {
+        bottom: 165px !important;
+        /* 90px do WPP + 55px (altura WPP) + 20px espaço */
+    }
+
+    .fixed-social-icons a {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /* Grid de Vantagens (4 colunas) */
+    .cursos-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Ajuste fino da newsletter */
+    .newsletter-content {
+        max-width: 1100px;
+        /* Alinha com o container */
+    }
+}

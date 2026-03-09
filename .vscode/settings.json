@@ -1,0 +1,33 @@
+{
+    "deploy": {
+        "packages": [
+            {
+                "name": "APIT Produção",
+                "files": [
+                    "**/*"
+                ],
+                "exclude": [
+                    "**/.vscode/**",
+                    "**/*.tmp",
+                    "**/*.temp",
+                    "**/node_modules/**"
+                ],
+                "deployOnSave": false,
+                "targets": [
+                    "Servidor HostGator APIT"
+                ]
+            }
+        ],
+        "targets": [
+            {
+                "type": "ftp",
+                "name": "Servidor HostGator",
+                "host": "108.179.193.184",
+                "port": 21,
+                "user": "kaua.papamike@apitaprendiz.org.br",
+                "password": "B3st$ecurePwd2025!",
+                "dir": "/"
+            }
+        ]
+    }
+}

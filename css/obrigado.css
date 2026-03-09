@@ -1,0 +1,933 @@
+/* ================================== */
+/* CSS AUTÔNOMO - PÁGINA OBRIGADO
+/* TEMA: ROXO
+/* ================================== */
+
+/* ---------------------------------- */
+/* 1. VARIÁVEIS E RESET GLOBAL        */
+/* ---------------------------------- */
+
+:root {
+    /* Paleta Vibrante */
+    --color-primary-blue: #005A9C;
+    --color-secondary-green: #34A853;
+    --color-accent-yellow: #FFBF00;
+    --color-accent-red: #EA4335;
+    --color-accent-purple: #7928CA;
+
+    --color-text-dark: #333333;
+    --color-text-light: #FFFFFF;
+    --color-bg-light: #FFFFFF;
+    --color-bg-grey: #f7f9fc;
+    /* Cinza mais suave */
+
+    --font-main: 'Poppins', sans-serif;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 8px 25px rgba(0, 90, 156, 0.1);
+    --border-radius: 12px;
+    --transition-fast: 0.2s ease-in-out;
+    --transition-premium: 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: var(--color-accent-yellow);
+    color: var(--color-text-dark);
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--color-text-dark);
+    line-height: 1.7;
+    background-color: var(--color-bg-light);
+    /* Fundo branco para a página de obrigado */
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    word-wrap: break-word;
+}
+
+h1 {
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ---------------------------------- */
+/* 2. COMPONENTES (BOTÕES) (TEMA ROXO) */
+/* ---------------------------------- */
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-primary {
+    background-color: var(--color-accent-purple);
+    color: var(--color-text-light);
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #5a1e96;
+    /* Roxo mais escuro */
+    transition: 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.btn-primary:hover::before {
+    width: 100%;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-text-light);
+    border: 2px solid var(--color-text-light);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-text-light);
+    color: var(--color-accent-purple);
+    /* Hover para roxo */
+}
+
+/* Estilos do Pop-up */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.popup-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    background: var(--color-bg-light);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.popup-overlay.show .popup-content {
+    transform: scale(1);
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    color: #999;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.popup-content i {
+    font-size: 3rem;
+    color: var(--color-accent-purple);
+    margin-bottom: 1rem;
+}
+
+.popup-form {
+    margin-top: 1.5rem;
+}
+
+.popup-form input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-family: var(--font-main);
+    margin-bottom: 1rem;
+}
+
+.popup-form .btn {
+    width: 100%;
+}
+
+
+/* ---------------------------------- */
+/* 3. HEADER E NAVEGAÇÃO              */
+/* ---------------------------------- */
+
+.header {
+    background-color: var(--color-bg-light);
+    width: 100%;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-light);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo img {
+    height: 50px;
+    width: auto;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-icon {
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-primary-blue);
+    transition: var(--transition-fast);
+}
+
+.search-icon:hover {
+    color: var(--color-accent-red);
+}
+
+.mobile-menu-toggle {
+    display: block;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-primary-blue);
+}
+
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 82px;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-bg-light);
+    box-shadow: var(--shadow-medium);
+    padding: 1rem 0;
+}
+
+.nav-menu.active {
+    display: block;
+}
+
+.nav-list {
+    flex-direction: column;
+}
+
+.nav-list li {
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.nav-link {
+    font-weight: 600;
+    color: var(--color-primary-blue);
+    padding: 0.75rem 1rem;
+    position: relative;
+    transition: var(--transition-fast);
+    border-radius: 8px;
+    margin: 0 1rem;
+    display: block;
+}
+
+/* Link "Seja Aprendiz" ativo no mobile */
+.nav-list li:nth-child(3) a.nav-link {
+    color: var(--color-text-light);
+    background-color: var(--color-accent-purple);
+}
+
+.nav-link:hover {
+    color: var(--color-text-light);
+    background-color: var(--color-accent-purple);
+    /* Hover roxo */
+}
+
+.nav-list li:nth-child(2) a.nav-link:hover {
+    color: var(--color-text-light);
+    background-color: var(--color-accent-purple);
+}
+
+/* ---------------------------------- */
+/* 4. BUSCA OVERLAY (NOVO)            */
+/* ---------------------------------- */
+.search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 51, 102, 0.95);
+    z-index: 1999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.search-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.search-overlay-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 3rem;
+    color: var(--color-text-light);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.search-overlay-close:hover {
+    transform: rotate(90deg);
+    color: var(--color-accent-red);
+}
+
+.search-overlay-content {
+    width: 90%;
+    max-width: 700px;
+}
+
+/* ---------------------------------- */
+/* 5. SEÇÃO "OBRIGADO"                */
+/* ---------------------------------- */
+
+main {
+    padding-top: 82px;
+}
+
+.hero-obrigado {
+    background: linear-gradient(135deg, var(--color-accent-purple), #5a1e96);
+    color: var(--color-text-light);
+    padding: 6rem 0;
+    min-height: calc(100vh - 82px);
+    /* Ocupa a tela inteira */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.obrigado-content {
+    max-width: 600px;
+    margin: 0 auto;
+    /* <-- Adicione esta linha */
+}
+
+.obrigado-content i {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-light);
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Animação */
+    transform: scale(0.5);
+    opacity: 0;
+    animation: pop-in 0.5s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes pop-in {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.obrigado-content h1 {
+    font-size: 2.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.obrigado-content p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.8;
+    margin: 0 auto 2rem;
+}
+
+.obrigado-content .btn-secondary {
+    border-width: 2px;
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+}
+
+.obrigado-content .btn-secondary:hover {
+    color: var(--color-accent-purple);
+}
+
+/* ---------------------------------- */
+/* 8. ANIMAÇÕES ON-SCROLL (PREMIUM)   */
+/* ---------------------------------- */
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform var(--transition-premium);
+    transition-delay: var(--delay, 0s);
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.animate-on-scroll.fade-in {
+    transform: scale(0.98);
+}
+
+.animate-on-scroll.slide-in-up {
+    transform: translateY(30px) scale(0.98);
+}
+
+.animate-on-scroll.slide-in-left {
+    transform: translateX(-30px) scale(0.98);
+}
+
+.animate-on-scroll.slide-in-right {
+    transform: translateX(30px) scale(0.98);
+}
+
+
+/* ---------------------------------- */
+/* 9. BOTÃO WHATSAPP E RODAPÉ  (TEMA ROXO) */
+/* ---------------------------------- */
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+
+    70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+.floating-wpp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 998;
+    animation: pulse 2s infinite;
+    transition: var(--transition-fast);
+}
+
+.floating-wpp:hover {
+    animation-play-state: paused;
+    transform: scale(1.15);
+}
+
+.footer {
+    background-color: var(--color-accent-purple);
+    /* <<< Fundo ROXO */
+    color: var(--color-text-light);
+    padding: 3rem 0 0;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-container-new {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footer-col-white {
+    background-color: var(--color-bg-light);
+    color: var(--color-text-dark);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    margin: 0 1rem;
+}
+
+.footer-col-white .footer-logo {
+    height: 70px;
+    width: auto;
+    margin-bottom: 1.5rem;
+}
+
+.footer-text-line1 {
+    font-weight: 600;
+    color: var(--color-text-dark);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.footer-divider {
+    border: none;
+    height: 2px;
+    background-color: var(--color-accent-yellow);
+    width: 50px;
+    margin: 1rem 0;
+}
+
+.footer-text-line2 {
+    font-weight: 700;
+    color: var(--color-accent-purple);
+    /* <<< Destaque Roxo */
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.footer-col-blue {
+    padding: 0 1rem;
+}
+
+.footer-grid-blue {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.footer-col h4 {
+    color: var(--color-text-light);
+    margin-bottom: 1rem;
+    position: relative;
+    font-size: 1.3rem;
+}
+
+.footer-col h4::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: var(--color-accent-yellow);
+    margin-top: 0.25rem;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    display: flex;
+    /* <-- Força o alinhamento em linha */
+    align-items: flex-start;
+    /* <-- Alinha o ícone no topo do texto */
+    line-height: 1.6;
+    /* <-- Melhora o espaçamento do texto que quebra a linha */
+}
+
+.footer-col ul a,
+.footer-col ul span {
+    color: var(--color-text-light);
+    transition: var(--transition-fast);
+}
+
+.footer-col ul a:hover {
+    color: var(--color-accent-yellow);
+}
+
+.footer-col ul i {
+    margin-right: 0.75rem;
+    /* <-- Aumentei um pouco o espaço */
+    width: 20px;
+    flex-shrink: 0;
+    /* <-- Impede o ícone de encolher */
+    text-align: center;
+    margin-top: 4px;
+    /* <-- Alinha o ícone verticalmente com o texto */
+}
+
+.social-links {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-text-light);
+    border-radius: 50%;
+    transition: var(--transition-fast);
+    font-size: 1.1rem;
+}
+
+.social-links a:hover {
+    background-color: var(--color-accent-yellow);
+    color: var(--color-primary-blue);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 3rem;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+}
+
+/* ---------------------------------- */
+/* 10. ESTILOS DO GOOGLE SEARCH (NOVO) */
+/* ---------------------------------- */
+.gcse-search {
+    display: none;
+}
+
+.search-overlay-content .gsc-control-cse {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.search-overlay-content form.gsc-search-box {
+    margin-bottom: 0;
+}
+
+.search-overlay-content table.gsc-search-box {
+    margin-bottom: 0;
+}
+
+.search-overlay-content .gsc-search-box-tools .gsc-search-box .gsc-input {
+    padding: 0;
+}
+
+.search-overlay-content input.gsc-input,
+.search-overlay-content input.gsc-input:focus {
+    background: transparent !important;
+    border: none !important;
+    color: var(--color-text-light) !important;
+    font-family: var(--font-main) !important;
+    font-size: 1.5rem !important;
+    padding: 1rem 0 !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    width: 100% !important;
+}
+
+.search-overlay-content input.gsc-input::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.search-overlay-content .gsc-search-button,
+.search-overlay-content .gsc-search-button:hover,
+.search-overlay-content .gsc-search-button:focus {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 0 0 0.5rem !important;
+    margin-left: 0;
+}
+
+.search-overlay-content .gsc-search-button-v2,
+.search-overlay-content .gsc-search-button-v2:hover,
+.search-overlay-content .gsc-search-button-v2:focus {
+    padding: 0 0 0 0.5rem !important;
+    margin: 0 !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.search-overlay-content .gsc-search-button-v2 svg {
+    fill: var(--color-accent-yellow) !important;
+    width: 22px;
+    height: 22px;
+}
+
+
+/* ---------------------------------- */
+/* 11. MEDIA QUERIES (DESKTOP)        */
+/* ---------------------------------- */
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    /* Header Desktop */
+    .header-logo img {
+        height: 70px;
+    }
+
+    main {
+        padding-top: 102px;
+    }
+
+    .nav-menu {
+        display: block;
+        position: static;
+        width: auto;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+        top: auto;
+    }
+
+    .mobile-menu-toggle {
+        display: none;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .nav-list li {
+        margin: 0;
+    }
+
+    /* === MENU DESKTOP (PÍLULA) (TEMA ROXO) === */
+    .nav-link {
+        padding: 0.5rem 1.2rem;
+        border-radius: 50px;
+        border: 2px solid;
+        background: transparent;
+        z-index: 1;
+        overflow: hidden;
+        margin: 0;
+        display: inline-block;
+    }
+
+    .nav-link:hover {
+        background: transparent;
+    }
+
+    .nav-link::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        z-index: -1;
+        transition: width 0.3s ease-out;
+        background-color: #ccc;
+
+    }
+
+    .nav-link:hover::before {
+        width: 100%;
+    }
+
+    /* 1: Quem Somos (Azul) */
+    .nav-list li:nth-child(1) a.nav-link {
+        border-color: var(--color-primary-blue);
+        color: var(--color-primary-blue);
+    }
+
+    .nav-list li:nth-child(1) a.nav-link::before {
+        background-color: var(--color-primary-blue);
+    }
+
+    .nav-list li:nth-child(1) a.nav-link:hover {
+        color: var(--color-text-light);
+    }
+
+    /* 2: Programas (Verde) */
+    .nav-list li:nth-child(2) a.nav-link {
+        border-color: var(--color-secondary-green);
+        color: var(--color-secondary-green);
+    }
+
+    .nav-list li:nth-child(2) a.nav-link::before {
+        background-color: var(--color-secondary-green);
+    }
+
+    .nav-list li:nth-child(2) a.nav-link:hover {
+        color: var(--color-text-light);
+    }
+
+    /* 3: Seja Aprendiz (ROXO - ATIVO) */
+    .nav-list li:nth-child(3) a.nav-link {
+        border-color: var(--color-accent-purple);
+        color: var(--color-text-light);
+        /* Texto branco */
+    }
+
+    .nav-list li:nth-child(3) a.nav-link::before {
+        background-color: var(--color-accent-purple);
+        width: 100%;
+    }
+
+    .nav-list li:nth-child(3) a.nav-link:hover {
+        color: var(--color-text-light);
+    }
+
+    /* 4: Para Empresas (Vermelho) */
+    .nav-list li:nth-child(4) a.nav-link {
+        border-color: var(--color-accent-red);
+        color: var(--color-accent-red);
+    }
+
+    .nav-list li:nth-child(4) a.nav-link::before {
+        background-color: var(--color-accent-red);
+    }
+
+    .nav-list li:nth-child(4) a.nav-link:hover {
+        color: var(--color-text-light);
+    }
+
+    /* 5: Central de Ajuda (Amarelo) */
+    .nav-list li:nth-child(5) a.nav-link {
+        border-color: var(--color-accent-yellow);
+        color: var(--color-accent-yellow);
+    }
+
+    .nav-list li:nth-child(5) a.nav-link::before {
+        background-color: var(--color-accent-yellow);
+    }
+
+    .nav-list li:nth-child(5) a.nav-link:hover {
+        color: var(--color-text-dark);
+    }
+
+    /* === FIM DA MUDANÇA (MENU DESKTOP "PÍLULA") === */
+
+    /* Hero Desktop */
+    .hero-obrigado {
+        margin-top: 102px;
+        /* Altura header desktop */
+        padding: 6rem 0;
+        min-height: calc(100vh - 102px);
+    }
+
+    .obrigado-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .obrigado-content p {
+        font-size: 1.25rem;
+    }
+
+    /* Busca Desktop */
+    .search-overlay-content input.gsc-input,
+    .search-overlay-content input.gsc-input:focus {
+        font-size: 2.5rem !important;
+    }
+
+    .search-overlay-content .gsc-search-button-v2 svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Divisor */
+    .shape-divider svg {
+        height: 120px;
+    }
+}

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APIT | Quero Apoiar</title>
+    <meta name="description" content="Contribua com a APIT e ajude a transformar o futuro de milhares de jovens.">
+    <meta property="og:image" content="https://www.apitaprendiz.org.br/og-image-doacao.jpg">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/doe.css">
+</head>
+
+<body>
+
+    <div class="page-decor-wrapper">
+        <img src="imagens/detalhe.png" alt="" class="bg-decor decor-top-right">
+        <img src="imagens/detalhe.png" alt="" class="bg-decor decor-bottom-left">
+    </div>
+
+    <div id="pix-modal" class="custom-modal">
+        <div class="custom-modal-content">
+            <button class="custom-modal-close" data-target="pix-modal" aria-label="Fechar">&times;</button>
+
+            <div class="modal-scroll-wrapper">
+                <div class="modal-header">
+                    <div class="modal-icon-top icon-pix"><i class="fas fa-qrcode"></i></div>
+                    <h2 class="modal-title">DOE VIA PIX</h2>
+                    <p class="modal-subtitle">SEU APOIO É INSTANTÂNEO</p>
+                </div>
+                <div class="modal-body">
+                    <div class="pix-box">
+                        <div class="copy-input-group">
+                            <input type="text" value="12.447.291/0001-40" readonly id="pix-key-input-modal">
+                            <button class="btn-copy-action" data-copy-target="pix-key-input-modal">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                        <p class="pix-cnpj-label">Chave CNPJ</p>
+                    </div>
+                    <div class="qr-section">
+                        <div class="qr-frame">
+                            <img src="imagens/qr-code-placeholder.png" alt="QR Code PIX" class="qr-img">
+                        </div>
+                        <p>Escaneie com o app do seu banco</p>
+                    </div>
+                </div>
+            </div>
+            <img src="imagens/detalhe.png" alt="" class="modal-decor">
+        </div>
+    </div>
+
+    <div id="bank-transfer-modal" class="custom-modal">
+        <div class="custom-modal-content">
+            <button class="custom-modal-close" data-target="bank-transfer-modal" aria-label="Fechar">&times;</button>
+
+            <div class="modal-scroll-wrapper">
+                <div class="modal-header">
+                    <div class="modal-icon-top icon-bank"><i class="fas fa-university"></i></div>
+                    <h2 class="modal-title">DADOS BANCÁRIOS</h2>
+                    <p class="modal-subtitle">TED / DOC / DEPÓSITO</p>
+                </div>
+                <div class="modal-body">
+                    <div class="bank-list">
+                        <div class="bank-item">
+                            <div class="bank-text">
+                                <span class="label">Banco</span><span class="value" id="bank-name">Itaú</span>
+                            </div>
+                            <button class="btn-copy-icon" data-copy-target="bank-name"><i
+                                    class="far fa-copy"></i></button>
+                        </div>
+                        <div class="bank-item">
+                            <div class="bank-text">
+                                <span class="label">Agência</span><span class="value" id="bank-agency">6498</span>
+                            </div>
+                            <button class="btn-copy-icon" data-copy-target="bank-agency"><i
+                                    class="far fa-copy"></i></button>
+                        </div>
+                        <div class="bank-item">
+                            <div class="bank-text">
+                                <span class="label">Conta Corrente</span><span class="value"
+                                    id="bank-account">75200-2</span>
+                            </div>
+                            <button class="btn-copy-icon" data-copy-target="bank-account"><i
+                                    class="far fa-copy"></i></button>
+                        </div>
+                        <div class="bank-item">
+                            <div class="bank-text">
+                                <span class="label">CNPJ</span><span class="value"
+                                    id="bank-cnpj">12.447.291/0001-40</span>
+                            </div>
+                            <button class="btn-copy-icon" data-copy-target="bank-cnpj"><i
+                                    class="far fa-copy"></i></button>
+                        </div>
+                        <div class="bank-item full-width">
+                            <div class="bank-text">
+                                <span class="label">Razão Social</span><span class="value"
+                                    id="bank-social-name">Associação Promotora de Instrução e Trabalho - APIT</span>
+                            </div>
+                            <button class="btn-copy-icon" data-copy-target="bank-social-name"><i
+                                    class="far fa-copy"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="imagens/detalhe.png" alt="" class="modal-decor">
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="header-logo">
+                <img src="imagens/LOGO-APIT_Transparente (003).png" alt="APIT Logo">
+            </a>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Abrir menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Quem Somos</a></li>
+                        <li><a href="programas.html" class="nav-link">Programas</a></li>
+                        <li><a href="aprendiz.html" class="nav-link">Seja Aprendiz</a></li>
+                        <li><a href="empresas.html" class="nav-link">Para Empresas</a></li>
+                        <li><a href="ajuda.html" class="nav-link">Central de Ajuda</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero" style="background-image: url('imagens/doacao-hero.jpg');">
+            <div class="hero-overlay"></div>
+
+            <div class="slide-content">
+                <span class="hero-tag">Junte-se à Causa</span>
+                <h1>Sua Doação Cria <br><span class="highlight-yellow">Futuros Brilhantes</span></h1>
+
+            </div>
+        </section>
+
+        <section class="donation-content">
+            <div class="container">
+                <div class="donation-intro text-center">
+                    <h2>Como você deseja <span class="highlight-blue">fazer a diferença</span> hoje?</h2>
+                    <p>Escolha a forma mais conveniente. Todo o processo é seguro e transparente.</p>
+                </div>
+
+                <div class="donation-cards-wrapper">
+                    <div class="premium-card card-pix-style">
+                        <div class="card-bg-decor"></div>
+                        <div class="card-icon-wrapper">
+                            <i class="fas fa-qrcode"></i>
+                        </div>
+                        <div class="card-body">
+                            <h3>PIX Instantâneo</h3>
+                            <p>A forma mais ágil e sem taxas para apoiar nossa missão agora mesmo.</p>
+                        </div>
+                        <button class="btn btn-premium open-modal-btn" data-modal-target="pix-modal">
+                            DOAR AGORA
+                        </button>
+                    </div>
+                    <div class="premium-card card-bank-style">
+                        <div class="card-bg-decor"></div>
+                        <div class="card-icon-wrapper">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="card-body">
+                            <h3>Transferência</h3>
+                            <p>Dados completos para realizar TED, DOC ou depósito bancário tradicional.</p>
+                        </div>
+                        <button class="btn btn-outline-premium open-modal-btn" data-modal-target="bank-transfer-modal">
+                            VER DADOS
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-partners-doacao">
+            <div class="container text-center">
+                <span class="section-tag">Transparência</span>
+                <h2>Quem confia e <span class="highlight-blue">Caminha Conosco</span></h2>
+                <div class="logosSwiper-doacao swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="imagens/parceiros/papamike.png" alt="Logo"></div>
+                        <div class="swiper-slide"><img src="imagens/parceiros/sabin.png" alt="Logo"></div>
+                        <div class="swiper-slide"><img src="imagens/parceiros/Anhanguera.png" alt="Logo"></div>
+                        <div class="swiper-slide"><img src="imagens/parceiros/geofix.png" alt="Logo"></div>
+                        <div class="swiper-slide"><img src="imagens/parceiros/controle.png" alt="Logo"></div>
+                        <div class="swiper-slide"><img src="imagens/parceiros/amaro.png" alt="Logo"></div>
+                        <div class="swiper-slide"><img src="imagens/parceiros/vital.png" alt="Logo"></div>
+                    </div>
+                    <div class="swiper-button-prev logos-arrow-doacao"></div>
+                    <div class="swiper-button-next logos-arrow-doacao"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container-new">
+            <div class="footer-col-white">
+                <img src="imagens/LOGO-APIT_Transparente (003).png" alt="APIT Logo" class="footer-logo">
+                <p class="footer-text-line1">Associação Promotora de Instrução e Trabalho</p>
+                <hr class="footer-divider">
+                <p class="footer-text-line2">Transformando vidas pela educação e trabalho.</p>
+            </div>
+            <div class="footer-col-blue">
+                <div class="footer-grid-blue">
+                    <div class="footer-col">
+                        <h4>Navegação</h4>
+                        <ul>
+                            <li><a href="index.html">Quem Somos</a></li>
+                            <li><a href="programas.html">Programas</a></li>
+                            <li><a href="aprendiz.html">Seja Aprendiz</a></li>
+                            <li><a href="empresas.html">Para Empresas</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contato</h4>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> <span>Rua Natanael Tito Salmon, 42 -
+                                    Osasco/SP</span></li>
+                            <li><i class="fas fa-phone"></i> <span>(11) 93097-2750</span></li>
+                            <li><i class="fas fa-envelope"></i> <span>contato@apitaprendiz.org.br</span></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Siga-nos</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/APITaprendiz/?ref=hl" target="_blank"
+                                aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/apit.aprendiz/" target="_blank" aria-label="Instagram"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/apit-aprendiz?_l=pt_BR" target="_blank"
+                                aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2026 © APIT. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5511930972750" class="floating-wpp fixed-element" target="_blank"><i
+            class="fab fa-whatsapp"></i></a>
+    <div vw class="enabled fixed-element">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/doe.js"></script>
+</body>
+
+</html>

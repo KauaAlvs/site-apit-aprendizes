@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Política de Privacidade | APIT</title>
+    <meta name="description"
+        content="Conheça a Política de Privacidade da APIT e como tratamos seus dados pessoais, em conformidade com a LGPD.">
+
+    <meta property="og:title" content="Política de Privacidade | APIT">
+    <meta property="og:description"
+        content="Conheça a Política de Privacidade da APIT e como tratamos seus dados pessoais.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* ---------------------------------- */
+        /* 1. VARIÁVEIS E RESET GLOBAL
+        /* ---------------------------------- */
+        :root {
+            --color-primary-blue: #005A9C;
+            --color-secondary-green: #34A853;
+            --color-accent-yellow: #FFBF00;
+            --color-accent-red: #EA4335;
+            --color-accent-purple: #7928CA;
+            --color-accent-purple-light: #f4eaff;
+            --color-text-dark: #333333;
+            --color-text-light: #FFFFFF;
+            --color-bg-light: #FFFFFF;
+            --color-bg-grey: #f7f9fc;
+            --font-main: 'Poppins', sans-serif;
+            --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --shadow-medium: 0 8px 25px rgba(0, 90, 156, 0.1);
+            --border-radius: 12px;
+            --transition-fast: 0.2s ease-in-out;
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ::selection {
+            background-color: var(--color-accent-yellow);
+            color: var(--color-text-dark);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--color-text-dark);
+            line-height: 1.7;
+            background-color: var(--color-bg-grey);
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.3;
+            word-wrap: break-word;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        main {
+            padding-top: 82px;
+            /* Altura do header mobile */
+        }
+
+        /* ---------------------------------- */
+        /* 3. HEADER E NAVEGAÇÃO
+        /* ---------------------------------- */
+
+        .header {
+            background-color: var(--color-bg-light);
+            width: 100%;
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-light);
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .search-icon {
+            font-size: 1.2rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--color-primary-blue);
+            transition: var(--transition-fast);
+        }
+
+        .search-icon:hover {
+            color: var(--color-accent-red);
+        }
+
+        .mobile-menu-toggle {
+            display: block;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--color-primary-blue);
+        }
+
+        .nav-menu {
+            display: none;
+            position: absolute;
+            top: 82px;
+            left: 0;
+            width: 100%;
+            background-color: var(--color-bg-light);
+            box-shadow: var(--shadow-medium);
+            padding: 1rem 0;
+        }
+
+        .nav-menu.active {
+            display: block;
+        }
+
+        .nav-list {
+            flex-direction: column;
+        }
+
+        .nav-list li {
+            text-align: center;
+            margin: 0.5rem 0;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: var(--color-primary-blue);
+            padding: 0.75rem 1rem;
+            position: relative;
+            transition: var(--transition-fast);
+            border-radius: 8px;
+            margin: 0 1rem;
+            display: block;
+        }
+
+        /* REMOVIDO: Link ativo roxo (nenhum link ativo nesta página) */
+
+        .nav-link:hover {
+            color: var(--color-text-light);
+            background-color: var(--color-accent-purple);
+        }
+
+        /* ---------------------------------- */
+        /* 4. BUSCA OVERLAY
+        /* ---------------------------------- */
+        .search-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 51, 102, 0.95);
+            z-index: 1999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+        }
+
+        .search-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .search-overlay-close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 3rem;
+            color: var(--color-text-light);
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+
+        .search-overlay-close:hover {
+            transform: rotate(90deg);
+            color: var(--color-accent-red);
+        }
+
+        .search-overlay-content {
+            width: 90%;
+            max-width: 700px;
+        }
+
+        .overlay-search-form {
+            display: flex;
+            width: 100%;
+            border-bottom: 3px solid var(--color-accent-yellow);
+        }
+
+        #overlay-search-input {
+            flex-grow: 1;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: var(--color-text-light);
+            font-family: var(--font-main);
+            font-size: 1.5rem;
+            padding: 1rem 0;
+        }
+
+        #overlay-search-input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 300;
+        }
+
+        .overlay-search-form button {
+            background: transparent;
+            border: none;
+            color: var(--color-accent-yellow);
+            font-size: 1.5rem;
+            padding: 1rem;
+            cursor: pointer;
+        }
+
+
+        /* ---------------------------------- */
+        /* 5. ESTILOS DA PÁGINA DE POLÍTICA
+        /* ---------------------------------- */
+
+        .policy-hero {
+            background: var(--color-accent-purple);
+            /* Um hero simples roxo */
+            padding: 3rem 0;
+            text-align: center;
+            color: var(--color-text-light);
+        }
+
+        .policy-hero h1 {
+            margin: 0;
+            font-size: 2rem;
+            /* Menor que o hero da home */
+        }
+
+        .policy-content {
+            padding: 3rem 0;
+            background: var(--color-bg-grey);
+        }
+
+        .policy-text-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--color-bg-light);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow-light);
+        }
+
+        .policy-text-card .update-date {
+            font-size: 0.9rem;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1rem;
+        }
+
+        .policy-text-card h2 {
+            color: var(--color-primary-blue);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--color-accent-purple-light);
+            padding-bottom: 0.5rem;
+        }
+
+        .policy-text-card h3 {
+            color: var(--color-accent-purple);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .policy-text-card p,
+        .policy-text-card ul {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            font-size: 0.95rem;
+            color: var(--color-text-dark);
+        }
+
+        .policy-text-card ul {
+            list-style-type: disc;
+            padding-left: 2rem;
+        }
+
+        .policy-text-card a {
+            color: var(--color-accent-purple);
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        .policy-text-card a:hover {
+            color: var(--color-accent-red);
+        }
+
+        /* ---------------------------------- */
+        /* 9. BOTÃO WHATSAPP E RODAPÉ
+        /* ---------------------------------- */
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            70% {
+                transform: scale(1.1);
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        .floating-wpp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 55px;
+            height: 55px;
+            background-color: #25D366;
+            color: #FFF;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            z-index: 998;
+            animation: pulse 2s infinite;
+            transition: var(--transition-fast);
+        }
+
+        .floating-wpp:hover {
+            animation-play-state: paused;
+            transform: scale(1.15);
+        }
+
+        .footer {
+            background-color: var(--color-accent-purple);
+            color: var(--color-text-light);
+            padding: 3rem 0 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-container-new {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .footer-col-white {
+            background-color: var(--color-bg-light);
+            color: var(--color-text-dark);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin: 0 1rem;
+        }
+
+        .footer-col-white .footer-logo {
+            height: 70px;
+            width: auto;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-text-line1 {
+            font-weight: 600;
+            color: var(--color-text-dark);
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .footer-divider {
+            border: none;
+            height: 2px;
+            background-color: var(--color-accent-yellow);
+            width: 50px;
+            margin: 1rem 0;
+        }
+
+        .footer-text-line2 {
+            font-weight: 700;
+            color: var(--color-accent-purple);
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+
+        .footer-col-blue {
+            padding: 0 1rem;
+        }
+
+        .footer-grid-blue {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: var(--color-text-light);
+            margin-bottom: 1rem;
+            position: relative;
+            font-size: 1.3rem;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 3px;
+            background-color: var(--color-accent-yellow);
+            margin-top: 0.25rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.6rem;
+            font-size: 0.95rem;
+        }
+
+        .footer-col ul a,
+        .footer-col ul span {
+            color: var(--color-text-light);
+            transition: var(--transition-fast);
+        }
+
+        .footer-col ul a:hover {
+            color: var(--color-accent-yellow);
+        }
+
+        .footer-col ul i {
+            margin-right: 0.75rem;
+            width: 20px;
+            flex-shrink: 0;
+            text-align: center;
+            margin-top: 4px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 35px;
+            height: 35px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--color-text-light);
+            border-radius: 50%;
+            transition: var(--transition-fast);
+            font-size: 1.1rem;
+        }
+
+        .social-links a:hover {
+            background-color: var(--color-accent-yellow);
+            color: var(--color-primary-blue);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: 3rem;
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+        }
+
+
+        /* ---------------------------------- */
+        /* 14. ELEMENTOS FIXOS (DOAÇÃO E SOCIAL)
+        /* ---------------------------------- */
+
+        .fixed-donation-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f0f0f0;
+            border-top: 1px solid #ddd;
+            padding: 0.5rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            z-index: 995;
+        }
+
+        .fixed-donation-bar p {
+            margin: 0;
+            font-weight: 600;
+            color: var(--color-text-dark);
+            font-size: 0.9rem;
+        }
+
+        .btn-donation {
+            background-color: var(--color-secondary-green);
+            color: var(--color-text-light);
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+        }
+
+        .btn-donation:hover {
+            background-color: #2a8a44;
+        }
+
+        .fixed-social-icons {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            z-index: 997;
+            background: rgba(121, 40, 202, 0.8);
+            backdrop-filter: blur(5px);
+            border-radius: 8px 0 0 8px;
+            box-shadow: var(--shadow-light);
+        }
+
+        .fixed-social-icons a {
+            display: block;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-text-light);
+            font-size: 1.1rem;
+            transition: var(--transition-fast);
+        }
+
+        .fixed-social-icons a:hover {
+            background-color: var(--color-accent-yellow);
+            color: var(--color-text-dark);
+        }
+
+        /* === NOVO: BOTÃO VOLTAR AO TOPO === */
+        .back-to-top-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            /* Lado esquerdo */
+            width: 45px;
+            height: 45px;
+            background-color: var(--color-accent-purple);
+            color: var(--color-text-light);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            box-shadow: var(--shadow-light);
+            z-index: 997;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all var(--transition-fast);
+        }
+
+        .back-to-top-btn.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top-btn:hover {
+            background-color: #5a1e96;
+            /* Roxo escuro */
+            transform: scale(1.1);
+        }
+
+        .floating-wpp {
+            bottom: 80px;
+        }
+
+        div[vw-access-button].active {
+            bottom: 140px !important;
+            right: -9px !important;
+            z-index: 999 !important;
+        }
+
+        .footer {
+            padding-bottom: 60px;
+        }
+
+        /* ---------------------------------- */
+        /* 15. MEDIA QUERIES (DESKTOP)
+        /* ---------------------------------- */
+
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            h3 {
+                font-size: 1.25rem;
+            }
+
+            main {
+                padding-top: 102px;
+            }
+
+            .header-logo img {
+                height: 70px;
+            }
+
+            .nav-menu {
+                display: block;
+                position: static;
+                width: auto;
+                background: none;
+                box-shadow: none;
+                padding: 0;
+                top: auto;
+            }
+
+            .mobile-menu-toggle {
+                display: none;
+            }
+
+            .nav-list {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .nav-list li {
+                margin: 0;
+            }
+
+            .nav-link {
+                padding: 0.5rem 1.2rem;
+                border-radius: 50px;
+                border: 2px solid;
+                background: transparent;
+                z-index: 1;
+                overflow: hidden;
+                margin: 0;
+                display: inline-block;
+            }
+
+            .nav-link:hover {
+                background: transparent;
+            }
+
+            .nav-link::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                z-index: -1;
+                transition: width 0.3s ease-out;
+                background-color: #ccc;
+            }
+
+            .nav-link:hover::before {
+                width: 100%;
+            }
+
+            /* Estilos dos links do Menu Desktop */
+            .nav-list li:nth-child(1) a.nav-link {
+                border-color: var(--color-primary-blue);
+                color: var(--color-primary-blue);
+            }
+
+            .nav-list li:nth-child(1) a.nav-link::before {
+                background-color: var(--color-primary-blue);
+            }
+
+            .nav-list li:nth-child(1) a.nav-link:hover {
+                color: var(--color-text-light);
+            }
+
+            .nav-list li:nth-child(2) a.nav-link {
+                border-color: var(--color-secondary-green);
+                color: var(--color-secondary-green);
+            }
+
+            .nav-list li:nth-child(2) a.nav-link::before {
+                background-color: var(--color-secondary-green);
+            }
+
+            .nav-list li:nth-child(2) a.nav-link:hover {
+                color: var(--color-text-light);
+            }
+
+            .nav-list li:nth-child(3) a.nav-link {
+                border-color: var(--color-accent-purple);
+                color: var(--color-accent-purple);
+                /* Não está ativo, então é roxo claro */
+            }
+
+            .nav-list li:nth-child(3) a.nav-link::before {
+                background-color: var(--color-accent-purple);
+            }
+
+            .nav-list li:nth-child(3) a.nav-link:hover {
+                color: var(--color-text-light);
+            }
+
+            .nav-list li:nth-child(4) a.nav-link {
+                border-color: var(--color-accent-red);
+                color: var(--color-accent-red);
+            }
+
+            .nav-list li:nth-child(4) a.nav-link::before {
+                background-color: var(--color-accent-red);
+            }
+
+            .nav-list li:nth-child(4) a.nav-link:hover {
+                color: var(--color-text-light);
+            }
+
+            /* Link "Central de Ajuda" (Amarelo) - Ativo */
+            .nav-list li:nth-child(5) a.nav-link {
+                border-color: var(--color-accent-yellow);
+                color: var(--color-text-dark);
+                background-color: var(--color-accent-yellow);
+            }
+
+            .nav-list li:nth-child(5) a.nav-link::before {
+                width: 100%;
+                background-color: var(--color-accent-yellow);
+            }
+
+            .nav-list li:nth-child(5) a.nav-link:hover {
+                color: var(--color-text-dark);
+            }
+
+            /* Hero da Política */
+            .policy-hero {
+                padding: 4rem 0;
+            }
+
+            .policy-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .policy-content {
+                padding: 4rem 0;
+            }
+
+            .policy-text-card {
+                padding: 3rem 4rem;
+            }
+
+            .policy-text-card h2 {
+                font-size: 1.8rem;
+            }
+
+            .policy-text-card p,
+            .policy-text-card ul {
+                font-size: 1rem;
+            }
+
+            /* Rodapé Desktop */
+            .footer {
+                padding-top: 4rem;
+            }
+
+            .footer-container-new {
+                flex-direction: row;
+                align-items: stretch;
+                gap: 3rem;
+                padding-bottom: 4rem;
+            }
+
+            .footer-col-white {
+                flex: 0 0 30%;
+                margin: 0;
+                padding: 2.5rem;
+            }
+
+            .footer-col-white .footer-logo {
+                height: 70px;
+            }
+
+            .footer-col-blue {
+                flex: 1;
+                padding: 0;
+            }
+
+            .footer-grid-blue {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .footer-col h4 {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .footer-col ul li {
+                margin-bottom: 0.75rem;
+                font-size: 0.95rem;
+                display: flex;
+                align-items: flex-start;
+                line-height: 1.6;
+            }
+
+            .social-links {
+                margin-top: 0;
+            }
+
+            .social-links a {
+                width: 40px;
+                height: 40px;
+                font-size: 1.3rem;
+            }
+
+            .footer-bottom {
+                margin-top: 0;
+                padding: 2.5rem 0;
+                font-size: 0.9rem;
+            }
+
+            /* Ajustes flutuantes para desktop */
+            .fixed-donation-bar {
+                flex-direction: row;
+                gap: 1.5rem;
+                padding: 0.75rem 1rem;
+                height: 70px;
+            }
+
+            .fixed-donation-bar p {
+                font-size: 1rem;
+            }
+
+            .btn-donation {
+                padding: 0.75rem 1.75rem;
+                font-size: 0.9rem;
+            }
+
+            .footer {
+                padding-bottom: 70px;
+            }
+
+            .back-to-top-btn {
+                bottom: 90px;
+                left: 30px;
+                width: 50px;
+                height: 50px;
+            }
+
+            .floating-wpp {
+                bottom: 90px;
+            }
+
+            div[vw-access-button].active {
+                bottom: 165px !important;
+            }
+
+            .fixed-social-icons a {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="header-logo">
+                <img src="imagens/LOGO-APIT_Transparente (003).png" alt="APIT Logo">
+            </a>
+            <div class="header-right">
+                <button class="search-icon" aria-label="Abrir busca">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Abrir menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <nav class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Quem Somos</a></li>
+                        <li><a href="programas.html" class="nav-link">Programas</a></li>
+                        <li><a href="aprendiz.html" class="nav-link">Seja Aprendiz</a></li>
+                        <li><a href="empresas.html" class="nav-link">Para Empresas</a></li>
+                        <li><a href="ajuda.html" class="nav-link">Central de Ajuda</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="search-overlay">
+        <button class="search-overlay-close" aria-label="Fechar busca">&times;</button>
+        <div class="search-overlay-content">
+            <form class="overlay-search-form" id="overlay-search-form" role="search">
+                <input type="text" id="overlay-search-input" placeholder="O que você procura? (ex: 'vagas', 'dúvidas')">
+                <button type="submit" aria-label="Buscar">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <main>
+        <section class="policy-hero">
+            <div class="container">
+                <h1>Política de Privacidade</h1>
+            </div>
+        </section>
+
+        <section class="policy-content">
+            <div class="container">
+                <div class="policy-text-card">
+                    <p class="update-date">Última atualização: 14 de novembro de 2025</p>
+
+                    <h2>1. Introdução</h2>
+                    <p>A <strong>Associação Promotora de Instrução e Trabalho (APIT)</strong>, inscrita no CNPJ sob o nº
+                        12.447.291/0001-40, com sede em Osasco/SP, leva a sua privacidade a sério e está comprometida em
+                        proteger os dados pessoais que coletamos e tratamos. Esta Política de Privacidade descreve como
+                        obtemos, armazenamos, utilizamos e compartilhamos suas informações, em total conformidade com a
+                        Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/18).</p>
+
+                    <h2>2. Definições</h2>
+                    <ul>
+                        <li><strong>Titular:</strong> Você, a pessoa física a quem os dados pessoais se referem (jovem
+                            aprendiz, representante de empresa, doador ou visitante).</li>
+                        <li><strong>Controlador:</strong> A APIT, a quem compete as decisões referentes ao tratamento de
+                            dados pessoais.</li>
+                        <li><strong>Dados Pessoais:</strong> Qualquer informação relacionada a uma pessoa física
+                            identificada ou identificável (ex: nome, CPF, e-mail, data de nascimento).</li>
+                        <li><strong>Tratamento:</strong> Toda operação realizada com dados pessoais (coleta, uso,
+                            armazenamento, compartilhamento, exclusão, etc.).</li>
+                        <li><strong>LGPD:</strong> Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018).</li>
+                    </ul>
+
+                    <h2>3. Quais dados coletamos e como?</h2>
+                    <p>Coletamos seus dados pessoais de diferentes formas, dependendo da sua interação com nosso site:
+                    </p>
+                    <ul>
+                        <li><strong>Inscrição de Jovem Aprendiz:</strong> Coletamos dados como nome completo, e-mail,
+                            data de nascimento, telefone, escolaridade e endereço (via CEP) através do formulário "Faça
+                            sua Inscrição Geral" e "Candidatura para Vaga". Opcionalmente, coletamos seu currículo (via
+                            upload) e uma breve mensagem.</li>
+                        <li><strong>Inscrição na Newsletter:</strong> Coletamos seu nome e e-mail através do formulário
+                            de newsletter para envio de comunicados e vagas.</li>
+                        <li><strong>Navegação (Cookies):</strong> Podemos coletar dados sobre sua navegação, como
+                            endereço IP, tipo de navegador e páginas visitadas, para melhorar sua experiência. Veja mais
+                            na Seção 8.</li>
+                    </ul>
+
+                    <h2>4. Por que usamos seus dados?</h2>
+                    <p>Utilizamos seus dados pessoais para as seguintes finalidades:</p>
+                    <ul>
+                        <li><strong>Para Jovens Aprendizes:</strong> Triagem e análise de perfil para encaminhamento a
+                            processos seletivos em nossas empresas parceiras.</li>
+                        <li><strong>Para Empresas:</strong> Gerenciamento do contrato de parceria e seleção de
+                            candidatos compatíveis com as vagas.</li>
+                        <li><strong>Comunicação:</strong> Enviar e-mails sobre o status da sua inscrição, novas vagas,
+                            dicas de carreira (newsletter) ou comunicados importantes.</li>
+                        <li><strong>Obrigações Legais:</strong> Cumprir exigências legais e regulatórias do Programa de
+                            Aprendizagem.</li>
+                        <li><strong>Segurança:</strong> Proteger nosso site e nossos sistemas contra fraudes.</li>
+                    </ul>
+
+                    <h2>5. Com quem compartilhamos seus dados?</h2>
+                    <p>A APIT não vende seus dados pessoais. Podemos compartilhá-los com:</p>
+                    <ul>
+                        <li><strong>Empresas Parceiras:</strong> Exclusivamente para fins de processos seletivos do
+                            Programa de Aprendizagem, quando seu perfil for compatível com uma vaga.</li>
+                        <li><strong>Ferramentas de Terceiros:</strong> Utilizamos plataformas como o MailerLite para
+                            gerenciar o envio de newsletters. Essas plataformas atuam como operadoras e só podem usar
+                            seus dados para a finalidade contratada.</li>
+                        <li><strong>Autoridades Públicas:</strong> Mediante ordem judicial ou requisição legal, para
+                            cumprimento de obrigações legais.</li>
+                    </ul>
+
+                    <h2>6. Por quanto tempo armazenamos seus dados?</h2>
+                    <p>Armazenamos seus dados pessoais apenas pelo tempo necessário para cumprir as finalidades para as
+                        quais foram coletados, ou para cumprir obrigações legais (como as relativas à legislação
+                        trabalhista e de aprendizagem).</p>
+                    <p>Para a newsletter, seus dados são mantidos até que você solicite a sua remoção (opt-out),
+                        clicando no link "cancelar inscrição" no rodapé de cada e-mail.</p>
+
+                    <h2>7. Quais são os seus direitos?</h2>
+                    <p>Como titular dos dados, você tem o direito de, a qualquer momento, solicitar:</p>
+                    <ul>
+                        <li>A confirmação da existência de tratamento dos seus dados;</li>
+                        <li>O acesso aos seus dados;</li>
+                        <li>A correção de dados incompletos, inexatos ou desatualizados;</li>
+                        <li>A anonimização, bloqueio ou eliminação de dados desnecessários;</li>
+                        <li>A eliminação dos dados tratados com seu consentimento (exceto quando a lei permitir a
+                            manutenção);</li>
+                        <li>Informações sobre o compartilhamento dos seus dados.</li>
+                    </ul>
+                    <p>Para exercer seus direitos, entre em contato conosco (veja Seção 11).</p>
+
+                    <h2>8. O que são Cookies?</h2>
+                    <p>Cookies são pequenos arquivos de texto que os sites armazenam no seu computador ou dispositivo
+                        móvel quando você os visita. Eles são usados para fazer os sites funcionarem de forma mais
+                        eficiente e para fornecer informações aos proprietários do site.</p>
+                    <p>Utilizamos cookies essenciais (para o funcionamento do site, como o VLibras) e cookies de análise
+                        (como o Google Analytics, de forma anonimizada) para entender como os visitantes usam nosso site
+                        e como podemos melhorá-lo. Você pode gerenciar ou excluir cookies através das configurações do
+                        seu navegador.</p>
+
+                    <h2>9. Segurança da Informação</h2>
+                    <p>A APIT adota medidas técnicas e administrativas para proteger seus dados pessoais contra acessos
+                        não autorizados, perda, alteração ou destruição. Nosso site utiliza certificado de segurança
+                        (SSL/TLS) para garantir que a comunicação seja criptografada.</p>
+
+                    <h2>10. Alterações nesta Política</h2>
+                    <p>Podemos atualizar esta Política de Privacidade periodicamente. Quando o fizermos, alteraremos a
+                        data da "Última atualização" no topo desta página. Recomendamos que você revise esta política
+                        regularmente para se manter informado sobre como estamos protegendo seus dados.</p>
+
+                    <h2>11. Contato (Encarregado de Dados - DPO)</h2>
+                    <p>Se você tiver dúvidas sobre esta Política de Privacidade ou desejar exercer seus direitos como
+                        titular de dados, entre em contato com nosso Encarregado pela Proteção de Dados (DPO) através do
+                        e-mail:</p>
+                    <p><a href="mailto:contato@apitaprendiz.org.br">contato@apitaprendiz.org.br</a></p>
+                    <p>Por favor, inclua "Privacidade de Dados" no assunto do e-mail.</p>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="fixed-donation-bar">
+        <p>Faça parte do futuro dos jovens!</p>
+        <a href="doe.html" class="btn btn-donation">FAZER DOAÇÃO</a>
+    </div>
+
+    <div class="fixed-social-icons">
+        <a href="https://www.facebook.com/APITaprendiz/?ref=hl#" aria-label="Facebook" target="_blank"><i
+                class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/apit.aprendiz/" aria-label="Instagram" target="_blank"><i
+                class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/apit-aprendiz?_l=pt_BR" aria-label="LinkedIn" target="_blank"><i
+                class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.youtube.com/channel/UCdPeTQpDNFk_StkOnEjNTAw" aria-label="YouTube" target="_blank"><i
+                class="fab fa-youtube"></i></a>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer-container-new">
+            <div class="footer-col-white">
+                <img src="imagens/LOGO-APIT_Transparente (003).png" alt="APIT Logo" class="footer-logo">
+                <p class="footer-text-line1">
+                    Associação Promotora de Instrução e Trabalho.
+                </p>
+                <hr class="footer-divider">
+                <p class="footer-text-line2">
+                    Transformando vidas pela educação e trabalho.
+                </p>
+            </div>
+            <div class="footer-col-blue">
+                <div class="footer-grid-blue">
+                    <div class="footer-col">
+                        <h4>Navegação</h4>
+                        <ul>
+                            <li><a href="index.html">Quem Somos</a></li>
+                            <li><a href="programas.html">Programas</a></li>
+                            <li><a href="aprendiz.html">Seja Aprendiz</a></li>
+                            <li><a href="empresas.html">Para Empresas</a></li>
+                            <li><a href="ajuda.html">Central de Ajuda</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contato</h4>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> Rua Natanael Tito Salmon, 42 - Osasco/SP</li>
+                            <li><i class="fas fa-phone"></i> (11) 93097-2750</li>
+                            <li><i class="fas fa-envelope"></i> contato@apitaprendiz.org.br</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Siga-nos</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/APITaprendiz/?ref=hl#" aria-label="Facebook"
+                                target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/apit.aprendiz/" aria-label="Instagram" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/apit-aprendiz?_l=pt_BR" aria-label="LinkedIn"
+                                target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2026 © APIT. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="#top" class="back-to-top-btn" aria-label="Voltar ao topo" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <a href="https://wa.me/5511930972750" class="floating-wpp" target="_blank" aria-label="Fale Conosco pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <script async src="https://cse.google.com/cse.js?cx=b07272153e4844bbb"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            /* --- 1. Lógica do Menu Mobile --- */
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+
+            if (menuToggle && navMenu) {
+                menuToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    const icon = menuToggle.querySelector('i');
+                    if (navMenu.classList.contains('active')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                        menuToggle.setAttribute('aria-label', 'Fechar menu');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                        menuToggle.setAttribute('aria-label', 'Abrir menu');
+                    }
+                });
+            }
+
+            /* --- 2. Lógica de fechar menu ao clicar no link --- */
+            const navLinks = document.querySelectorAll('.nav-link');
+            if (navMenu && menuToggle) {
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        // Fecha o menu mobile (apenas se estiver visível)
+                        if (navMenu.classList.contains('active')) {
+                            navMenu.classList.remove('active');
+                            menuToggle.querySelector('i').classList.remove('fa-times');
+                            menuToggle.querySelector('i').classList.add('fa-bars');
+                            menuToggle.setAttribute('aria-label', 'Abrir menu');
+                        }
+                    });
+                });
+            }
+
+            /* --- 3. Lógica da Busca (lupa.js) --- */
+            const searchIcon = document.querySelector('.search-icon');
+            const searchOverlay = document.querySelector('.search-overlay');
+            const searchClose = document.querySelector('.search-overlay-close');
+
+            if (searchIcon && searchOverlay && searchClose) {
+                searchIcon.addEventListener('click', () => {
+                    searchOverlay.classList.add('active');
+                });
+                searchClose.addEventListener('click', () => {
+                    searchOverlay.classList.remove('active');
+                });
+            }
+
+            /* --- 4. Lógica do Formulário de Busca --- */
+            const searchForm = document.getElementById('overlay-search-form');
+            const searchInput = document.getElementById('overlay-search-input');
+
+            if (searchForm && searchInput) {
+                searchForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const query = searchInput.value.toLowerCase().trim();
+                    if (!query) return;
+
+                    const routes = {
+                        'vaga': 'aprendiz.html',
+                        'vagas': 'aprendiz.html',
+                        'aprendiz': 'aprendiz.html',
+                        'inscrever': 'aprendiz.html',
+                        'inscrição': 'aprendiz.html',
+                        'empresa': 'empresas.html',
+                        'empresas': 'empresas.html',
+                        'contratar': 'empresas.html',
+                        'dúvida': 'ajuda.html',
+                        'duvida': 'ajuda.html',
+                        'ajuda': 'ajuda.html',
+                        'faq': 'ajuda.html',
+                        'programa': 'programas.html',
+                        'programas': 'programas.html',
+                        'curso': 'programas.html',
+                        'quem somos': 'index.html',
+                        'sobre': 'index.html',
+                        'apit': 'index.html'
+                    };
+
+                    let found = false;
+                    for (const key in routes) {
+                        if (query.includes(key)) {
+                            window.location.href = routes[key];
+                            found = true;
+                            break;
+                        }
+                    }
+
+                    if (!found) {
+                        searchInput.value = '';
+                        searchInput.placeholder = 'Não encontrado. Tente "vagas" ou "dúvidas".';
+                        searchForm.style.animation = 'shake 0.5s';
+                        setTimeout(() => {
+                            searchForm.style.animation = '';
+                        }, 500);
+                    }
+                });
+            }
+
+            /* --- 5. NOVO: LÓGICA DO BOTÃO "VOLTAR AO TOPO" --- */
+            const backToTopBtn = document.getElementById('back-to-top');
+
+            if (backToTopBtn) {
+                // Mostra/esconde o botão
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 400) { // Mostra depois de 400px de scroll
+                        backToTopBtn.classList.add('show');
+                    } else {
+                        backToTopBtn.classList.remove('show');
+                    }
+                });
+
+                // Ação de clique (scroll suave)
+                backToTopBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+        });
+    </script>
+</body>
+
+</html>

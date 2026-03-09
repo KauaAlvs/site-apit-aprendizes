@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Seja um Aprendiz | APIT</title>
+    <meta name="description"
+        content="Inscreva-se no Programa Jovem Aprendiz da APIT e transforme seu futuro. Conheça os requisitos e benefícios.">
+
+    <meta property="og:title" content="Seja um Aprendiz | APIT">
+    <meta property="og:description"
+        content="Inscreva-se no Programa Jovem Aprendiz da APIT e transforme seu futuro. Conheça os requisitos e benefícios.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="css/aprendiz.css">
+    <link rel="stylesheet" href="css/lupa.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="header-logo">
+                <img src="imagens/LOGO-APIT_Transparente (003).png" alt="APIT Logo">
+            </a>
+            <div class="header-right">
+                <button class="search-icon" aria-label="Abrir busca">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Abrir menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <nav class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Quem Somos</a></li>
+                        <li><a href="programas.html" class="nav-link">Programas</a></li>
+                        <li><a href="aprendiz.html" class="nav-link">Seja Aprendiz</a></li>
+                        <li><a href="empresas.html" class="nav-link">Para Empresas</a></li>
+                        <li><a href="ajuda.html" class="nav-link">Central de Ajuda</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="search-overlay">
+        <button class="search-overlay-close" aria-label="Fechar busca">&times;</button>
+        <div class="search-overlay-content">
+            <form class="overlay-search-form" id="overlay-search-form" role="search">
+                <input type="text" id="overlay-search-input" placeholder="O que você procura? (ex: 'vagas', 'dúvidas')">
+                <button type="submit" aria-label="Buscar">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <main>
+
+        <section class="hero-aprendiz">
+            <div class="container">
+                <h1 class="animate-on-scroll fade-in">Seja um Jovem Aprendiz</h1>
+                <p class="animate-on-scroll fade-in" style="--delay: 0.1s;">Esta é a sua chance de entrar no mercado de
+                    trabalho e construir uma carreira de sucesso.</p>
+
+                <div class="hero-buttons">
+                    <a href="#formulario-inscricao" class="btn btn-primary animate-on-scroll fade-in"
+                        style="--delay: 0.2s;">Inscreva-se Agora</a>
+                    <a href="#newsletter" class="btn btn-secondary animate-on-scroll fade-in"
+                        style="--delay: 0.3s;">Newsletter</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="aprendiz-requisitos">
+            <div class="container">
+                <span class="section-tag text-center animate-on-scroll fade-in">O primeiro passo</span>
+                <h2 class="text-center animate-on-scroll fade-in">Requisitos para participar</h2>
+
+                <div class="requisitos-grid">
+                    <div class="req-card animate-on-scroll slide-in-up" style="--delay: 0.1s;">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3>Idade</h3>
+                        <p>Ter entre 14 e 24 anos incompletos.</p>
+                    </div>
+                    <div class="req-card animate-on-scroll slide-in-up" style="--delay: 0.2s;">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>Escolaridade</h3>
+                        <p>Estar cursando o Ensino Fundamental, Ensino Médio ou já ter concluído.</p>
+                    </div>
+                    <div class="req-card animate-on-scroll slide-in-up" style="--delay: 0.3s;">
+                        <i class="fas fa-star"></i>
+                        <h3>Protagonismo</h3>
+                        <p>Ter vontade de aprender e ser o protagonista da sua carreira.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="aprendiz-vagas" id="vagas-destaque">
+            <div class="container">
+                <span class="section-tag text-center animate-on-scroll fade-in">Oportunidades</span>
+                <h2 class="text-center animate-on-scroll fade-in">Vagas em Destaque</h2>
+                <div class="vagas-grid">
+
+                    <div class="vaga-card animate-on-scroll slide-in-up" style="--delay: 0.1s;"
+                        data-title="Aprendiz em Administração (Rotinas)"
+                        data-desc="Vaga para rotinas administrativas, organização de arquivos e suporte à equipe.">
+                        <div class="vaga-card-logo-wrapper">
+                            <img src="imagens/LOGO-APIT_Transparente (003).png" alt="APIT Logo" class="vaga-card-logo">
+                        </div>
+                        <div class="vaga-card-content">
+                            <h3>Aprendiz Administrativo</h3>
+                            <span class="vaga-card-tag">APIT & Empresas Parceiras</span>
+                            <button class="btn-link btn-vaga-popup">Quero esta vaga <i
+                                    class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="vaga-card animate-on-scroll slide-in-up" style="--delay: 0.2s;"
+                        data-title="Aprendiz (Atendimento)"
+                        data-desc="Vaga para atendimento ao cliente via telefone e e-mail, registro de chamados e suporte básico.">
+                        <div class="vaga-card-logo-wrapper">
+                            <img src="imagens/LOGO-APIT_Transparente (003).png" alt="APIT Logo" class="vaga-card-logo">
+                        </div>
+                        <div class="vaga-card-content">
+                            <h3>Aprendiz Administrativo</h3>
+                            <span class="vaga-card-tag">APIT & Empresas Parceiras</span>
+                            <button class="btn-link btn-vaga-popup">Quero esta vaga <i
+                                    class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="vaga-card animate-on-scroll slide-in-up" style="--delay: 0.3s;"
+                        data-title="Aprendiz (Financeiro)"
+                        data-desc="Vaga para auxiliar em lançamentos, conciliação bancária e organização de documentos financeiros.">
+                        <div class="vaga-card-logo-wrapper">
+                            <img src="imagens/LOGO-APIT_Transparente (003).png" alt="APIT Logo" class="vaga-card-logo">
+                        </div>
+                        <div class="vaga-card-content">
+                            <h3>Aprendiz Administrativo</h3>
+                            <span class="vaga-card-tag">APIT & Empresas Parceiras</span>
+                            <button class="btn-link btn-vaga-popup">Quero esta vaga <i
+                                    class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="vagas-footer-note animate-on-scroll fade-in">
+                    Ao se candidatar, seus dados serão coletados e analisados por nossa equipe. Se seu perfil for
+                    compatível, encaminharemos para as empresas parceiras e retornaremos o contato.
+                </p>
+
+            </div>
+        </section>
+
+        <section class="aprendiz-dicas">
+            <div class="container">
+                <div class="dicas-layout">
+                    <div class="dicas-texto animate-on-scroll slide-in-left">
+                        <span class="section-tag">Como Funciona?</span>
+                        <h2>Como se candidatar?</h2>
+                        <p>O processo é simples! Siga os passos abaixo e mantenha seu cadastro sempre atualizado.</p>
+
+                        <div class="steps-list">
+                            <div class="step-item">
+                                <span class="step-number">1</span>
+                                <p>Faça sua <strong>inscrição geral</strong> abaixo para nosso banco de talentos.</p>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-number">2</span>
+                                <p>Candidate-se também nas <strong>vagas em destaque</strong> que combinam com você.</p>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-number">3</span>
+                                <p>Mantenha seu <strong>e-mail e telefone corretos</strong>; é por lá que falaremos com
+                                    você!</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="dicas-card card animate-on-scroll slide-in-right">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Dica de Ouro</h3>
+                        <p><strong>Seja protagonista!</strong> Mesmo após se inscrever, continue estudando e buscando
+                            conhecimento. Cursos online gratuitos sobre pacote Office, atendimento ao cliente ou
+                            comunicação são um grande diferencial.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="aprendiz-beneficios">
+            <div class="container">
+                <span class="section-tag text-center animate-on-scroll fade-in">Seus Direitos</span>
+                <h2 class="text-center animate-on-scroll fade-in">Conheça seus benefícios</h2>
+
+                <div class="swiper beneficios-swiper animate-on-scroll fade-in" style="--delay: 0.1s;">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="beneficio-card">
+                                <i class="fas fa-wallet"></i>
+                                <h3>Salário</h3><br><br>
+                                <p>Remuneração mensal com base no salário mínimo/hora (CLT).</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="beneficio-card">
+                                <i class="fas fa-bus"></i>
+                                <h3>Vale-Transporte</h3><br><br>
+                                <p>Garantia do seu deslocamento de casa para o trabalho e curso.</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="beneficio-card">
+                                <i class="fas fa-umbrella-beach"></i>
+                                <h3>Férias</h3><br><br>
+                                <p>Direito a férias remuneradas, coincidindo com as férias escolares.</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="beneficio-card">
+                                <i class="fas fa-gift"></i>
+                                <h3>13º Salário</h3><br><br>
+                                <p>Direito ao 13º salário, proporcional ao tempo de contrato.</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="beneficio-card">
+                                <i class="fas fa-piggy-bank"></i>
+                                <h3>FGTS</h3><br><br>
+                                <p>Recolhimento de 2% para o Fundo de Garantia por Tempo de Serviço.</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="beneficio-card">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <h3>Capacitação</h3><br><br>
+                                <p>Curso teórico gratuito e de alta qualidade fornecido pela APIT.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="aprendiz-formulario" id="formulario-inscricao">
+            <div class="container">
+                <div class="form-container-card animate-on-scroll fade-in">
+                    <div class="form-header">
+                        <i class="fas fa-paper-plane"></i>
+                        <h2>Faça sua Inscrição Geral</h2>
+                        <p>Preencha seus dados para nosso banco de talentos e concorrer a todas as vagas.</p>
+                    </div>
+
+                    <form class="form-aprendiz" action="enviar-inscricao.php" method="POST"
+                        enctype="multipart/form-data">
+
+                        <input type="hidden" name="_next" value="obrigado-aprendiz.html">
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="nome">Nome Completo</label>
+                                <input type="text" id="nome" name="Nome Completo" placeholder="Digite seu nome completo"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="E-mail" placeholder="seu.email@exemplo.com"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="nascimento">Data de Nascimento</label>
+                                <input type="date" id="nascimento" name="Data de Nascimento" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="seu-numero">Telefone (com DDD)</label>
+                                <input type="tel" id="seu-numero" name="Telefone" placeholder="(11) 90000-0000"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="escolaridade">Escolaridade</label>
+                                <select id="escolaridade" name="Escolaridade" required>
+                                    <option value="" disabled selected>Selecione seu nível de estudo</option>
+                                    <option value="fundamental_cursando">Ensino Fundamental (Cursando)</option>
+                                    <option value="medio_cursando">Ensino Médio (Cursando)</option>
+                                    <option value="medio_concluido">Ensino Médio (Concluído)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="cep">CEP</label>
+                                <input type="text" id="cep" name="CEP" placeholder="00000-000" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cidade">Cidade</label>
+                                <input type="text" id="cidade" name="Cidade" placeholder="Preenchido pelo CEP" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="estado">Estado</label>
+                                <input type="text" id="estado" name="Estado" placeholder="Preenchido pelo CEP" readonly>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="mensagem">Por que você quer ser um Jovem Aprendiz?</label>
+                                <textarea id="mensagem" name="Mensagem" rows="5"
+                                    placeholder="Conte um pouco sobre você..."></textarea>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label>Anexe seu Currículo (PDF ou DOCX)</label>
+                                <label for="curriculo" class="btn-file-upload" tabindex="0">
+                                    <i class="fas fa-upload"></i>
+                                    <span>Escolher Arquivo</span>
+                                    <input type="file" id="curriculo" name="curriculo"
+                                        accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                                </label>
+                                <span class="file-name-display" id="file-name">Nenhum arquivo selecionado</span>
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Enviar Inscrição</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <section class="aprendiz-newsletter" id="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <span class="section-tag">Fique por dentro!</span>
+                    <h2 class="animate-on-scroll fade-in">Não Perca Nenhuma Vaga</h2>
+                    <p class="animate-on-scroll fade-in" style="--delay: 0.1s;">Cadastre-se para receber novas
+                        oportunidades, dicas de carreira e novidades da APIT direto no seu e-mail.</p>
+                </div>
+
+                <form class="newsletter-form animate-on-scroll fade-in" style="--delay: 0.2s;"
+                    action="https://assets.mailerlite.com/jsonp/1905511/forms/170950368390284581/subscribe" data-code=""
+                    method="post" target="_blank">
+
+                    <div class="form-group">
+                        <label for="newsletter-name" class="sr-only">Nome</label>
+                        <input type="text" id="newsletter-name" name="fields[name]" placeholder="Seu nome"
+                            autocomplete="given-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="newsletter-email" class="sr-only">E-mail</label>
+                        <input type="email" id="newsletter-email" name="fields[email]" placeholder="Seu e-mail"
+                            autocomplete="email" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Inscreva-se!</button>
+
+                    <input type="hidden" name="ml-submit" value="1">
+                    <input type="hidden" name="anticsrf" value="true">
+                </form>
+                <p class="newsletter-privacy animate-on-scroll fade-in" style="--delay: 0.3s;">
+                    Respeitamos sua privacidade. Consulte nossa <a href="politica.html" target="_blank">Política de
+                        Privacidade</a>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="popup-overlay-vaga" id="popup-vaga" role="dialog" aria-modal="true" aria-labelledby="popup-vaga-title"
+        style="display: none;">
+        <div class="popup-content-vaga">
+            <button class="popup-close-vaga" aria-label="Fechar">&times;</button>
+            <div class="form-header">
+                <i class="fas fa-briefcase"></i>
+                <h2 id="popup-vaga-title">Candidatura para Vaga</h2>
+                <p id="popup-vaga-desc">Preencha seus dados para a vaga de <strong id="popup-vaga-nome"></strong></p>
+            </div>
+
+            <form class="form-aprendiz" action="enviar-vaga.php" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="vaga-titulo" id="vaga-titulo-input">
+                <input type="hidden" name="vaga-desc" id="vaga-desc-input">
+
+                <div class="form-group">
+                    <label for="vaga-nome">Nome Completo</label>
+                    <input type="text" id="vaga-nome" name="vaga-nome" placeholder="Digite seu nome completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="vaga-email">E-mail</label>
+                    <input type="email" id="vaga-email" name="vaga-email" placeholder="seu.email@exemplo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="vaga-telefone">Telefone (com DDD)</label>
+                    <input type="tel" id="vaga-telefone" name="vaga-telefone" placeholder="(11) 90000-0000" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Anexe seu Currículo (PDF ou DOCX)</label>
+                    <label for="vaga-curriculo" class="btn-file-upload" tabindex="0">
+                        <i class="fas fa-upload"></i>
+                        <span>Escolher Arquivo</span>
+                        <input type="file" id="vaga-curriculo" name="vaga-curriculo"
+                            accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                            required>
+                    </label>
+                    <span class="file-name-display" id="vaga-file-name">Nenhum arquivo selecionado</span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-submit">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Enviar Candidatura</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="fixed-donation-bar">
+        <p>Faça parte do futuro dos jovens!</p>
+        <a href="doe.html" class="btn btn-donation">FAZER DOAÇÃO</a>
+    </div>
+
+    <div class="fixed-social-icons">
+        <a href="https://www.facebook.com/APITaprendiz/?ref=hl#" aria-label="Facebook" target="_blank"><i
+                class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/apit.aprendiz/" aria-label="Instagram" target="_blank"><i
+                class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/apit-aprendiz?_l=pt_BR" aria-label="LinkedIn" target="_blank"><i
+                class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.youtube.com/channel/UCdPeTQpDNFk_StkOnEjNTAw" aria-label="YouTube" target="_blank"><i
+                class="fab fa-youtube"></i></a>
+    </div>
+
+
+    <footer class="footer">
+        <div class="container footer-container-new">
+            <div class="footer-col-white">
+                <img src="imagens/LOGO-APIT_Transparente (003).png" alt="APIT Logo" class="footer-logo">
+                <p class="footer-text-line1">
+                    Associação Promotora de Instrução e Trabalho.
+                </p>
+                <hr class="footer-divider">
+                <p class="footer-text-line2">
+                    Transformando vidas pela educação e trabalho.
+                </p>
+            </div>
+            <div class="footer-col-blue">
+                <div class="footer-grid-blue">
+                    <div class="footer-col">
+                        <h4>Navegação</h4>
+                        <ul>
+                            <li><a href="#quem-somos">Quem Somos</a></li>
+                            <li><a href="programas.html">Programas</a></li>
+                            <li><a href="aprendiz.html">Seja Aprendiz</a></li>
+                            <li><a href="empresas.html">Para Empresas</a></li>
+                            <li><a href="ajuda.html">Central de Ajuda</a></li>
+                            <li><a href="politica.html">Política de privacidade</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Contato</h4>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> Rua Natanael Tito Salmon, 42 - Osasco/SP</li>
+                            <li><i class="fas fa-phone"></i> (11) 93097-2750</li>
+                            <li><i class="fas fa-envelope"></i> contato@apitaprendiz.org.br</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Siga-nos</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/APITaprendiz/?ref=hl#" aria-label="Facebook"
+                                target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/apit.aprendiz/" aria-label="Instagram" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/apit-aprendiz?_l=pt_BR" aria-label="LinkedIn"
+                                target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2026 © APIT. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5511930972750" class="floating-wpp" target="_blank" aria-label="Fale Conosco pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <script async src="https://cse.google.com/cse.js?cx=b07272153e4844bbb"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="js/aprendiz.js" defer></script>
+    <script src="js/lupa.js" defer></script>
+</body>
+
+</html>

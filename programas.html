@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nosso Programa de Aprendizagem | APIT</title>
+    <meta name="description"
+        content="Conheça o Programa de Aprendizagem da APIT, baseado na Lei 10.097/2000, e veja os benefícios para jovens e empresas.">
+    <meta property="og:title" content="Nosso Programa de Aprendizagem | APIT">
+    <meta property="og:description"
+        content="Conheça os benefícios, requisitos e cursos do nosso programa de aprendizagem.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/programas.css">
+    <link rel="stylesheet" href="css/lupa.css">
+    <link rel="stylesheet" href="css/flutuante.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="header-logo">
+                <img src="imagens/LOGO-APIT_Transparente (003).png" alt="APIT Logo">
+            </a>
+            <div class="header-right">
+                <button class="search-icon" aria-label="Abrir busca">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Abrir menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <nav class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Quem Somos</a></li>
+                        <li><a href="programas.html" class="nav-link">Programas</a></li>
+                        <li><a href="aprendiz.html" class="nav-link">Seja Aprendiz</a></li>
+                        <li><a href="empresas.html" class="nav-link">Para Empresas</a></li>
+                        <li><a href="ajuda.html" class="nav-link">Central de Ajuda</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="search-overlay">
+        <button class="search-overlay-close" aria-label="Fechar busca">&times;</button>
+        <div class="search-overlay-content">
+            <form class="overlay-search-form" id="overlay-search-form" role="search">
+                <input type="text" id="overlay-search-input" placeholder="O que você procura? (ex: 'vagas', 'dúvidas')">
+                <button type="submit" aria-label="Buscar">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <main>
+
+        <section class="hero-programas">
+            <div class="container">
+                <h1 class="animate-on-scroll fade-in">Programa de Aprendizagem</h1>
+                <p class="animate-on-scroll fade-in" style="--delay: 0.1s;">Formação que transforma o futuro de jovens e
+                    fortalece empresas.</p>
+
+                <div class="hero-buttons">
+                    <a href="aprendiz.html" class="btn btn-primary animate-on-scroll" style="--delay: 0.2s;">
+                        Quero ser Aprendiz
+                    </a>
+                    <a href="empresas.html" class="btn btn-secondary animate-on-scroll" style="--delay: 0.3s;">
+                        Quero Contratar
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="programas-intro">
+            <div class="container text-center animate-on-scroll slide-in-up" style="--delay: 0.2s;">
+                <span class="section-tag">Baseado na Lei 10.097/2000</span>
+                <h2>O que é o Programa de Aprendizagem?</h2>
+                <p class="intro-text">É um programa de aprendizagem profissional que visa a inclusão de jovens no
+                    mercado de trabalho. Regido pela Lei 10.097/2000, determina que empresas de médio e grande porte
+                    devem contratar uma cota de 5% a 15% de aprendizes. A APIT cuida de todo o processo, desde a seleção
+                    e capacitação até a gestão do jovem.</p>
+            </div>
+        </section>
+
+        <section class="programas-publico">
+            <div class="container">
+
+                <div class="publico-tab-nav animate-on-scroll fade-in">
+                    <button class="publico-tab-btn active" data-tab="jovem">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>Para o Jovem</span>
+                    </button>
+                    <button class="publico-tab-btn" data-tab="empresa">
+                        <i class="fas fa-building"></i>
+                        <span>Para a Empresa</span>
+                    </button>
+                </div>
+
+                <div class="publico-tab-content">
+
+                    <div class="publico-tab-panel active" data-tab="jovem">
+                        <div class="panel-layout">
+                            <div class="panel-text">
+                                <h3>Requisitos para o Jovem</h3>
+                                <p>A oportunidade ideal para seu primeiro emprego, combinando estudo e trabalho
+                                    remunerado.</p>
+                                <ul class="beneficios-lista">
+                                    <li class="animate-on-scroll fade-in" style="--delay: 0.2s;">
+                                        <i class="fas fa-check"></i>
+                                        <span>Ter entre 14 e 24 anos.</span>
+                                    </li>
+                                    <li class="animate-on-scroll fade-in" style="--delay: 0.3s;">
+                                        <i class="fas fa-check"></i>
+                                        <span>Estar cursando o Ensino Fundamental ou Médio (ou ter concluído).</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="panel-text">
+                                <h3>Benefícios para o Jovem</h3>
+                                <p>Garantia de direitos e desenvolvimento profissional.</p>
+                                <ul class="beneficios-lista">
+                                    <li class="animate-on-scroll fade-in" style="--delay: 0.4s;">
+                                        <i class="fas fa-check"></i>
+                                        <span>Capacitação profissional gratuita e de qualidade.</span>
+                                    </li>
+                                    <li class="animate-on-scroll fade-in" style="--delay: 0.5s;">
+                                        <i class="fas fa-check"></i>
+                                        <span>Contrato de trabalho (CLT) e remuneração (salário mínimo/hora).</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel-cta animate-on-scroll fade-in" style="--delay: 0.6s;">
+                            <a href="aprendiz.html" class="btn btn-primary">Quero ser Aprendiz</a>
+                        </div>
+                    </div>
+
+                    <div class="publico-tab-panel" data-tab="empresa">
+                        <div class="panel-layout">
+                            <div class="panel-text">
+                                <h3>Obrigações da Empresa</h3>
+                                <p>Cumpra sua cota de aprendizagem com excelência e fortaleça a responsabilidade social.
+                                </p>
+                                <ul class="beneficios-lista">
+                                    <li class="animate-on-scroll fade-in" style="--delay: 0.2s;">
+                                        <i class="fas fa-check"></i>
+                                        <span>Atendimento à legislação (Lei 10.097/00).</span>
+                                    </li>
+                                    <li class="animate-on-scroll fade-in" style="--delay: 0.3s;">
+                                        <i class="fas fa-check"></i>
+                                        <span>Contratação de 5% a 15% de aprendizes (empresas de médio/grande
+                                            porte).</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="panel-text">
+                                <h3>Benefícios para a Empresa</h3>
+                                <p>Investir em novos talentos gera retorno para o seu negócio.</p>
+                                <ul class="beneficios-lista">
+                                    <li class="animate-on-scroll fade-in" style="--delay: 0.4s;">
+                                        <i class="fas fa-check"></i>
+                                        <span>Gestão completa do processo seletivo e burocrático pela APIT.</span>
+                                    </li>
+                                    <li class="animate-on-scroll fade-in" style="--delay: 0.5s;">
+                                        <i class="fas fa-check"></i>
+                                        <span>Formação de mão de obra qualificada e alinhada à cultura da
+                                            empresa.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel-cta animate-on-scroll fade-in" style="--delay: 0.6s;">
+                            <a href="empresas.html" class="btn btn-primary">Quero Contratar</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="programas-cursos">
+            <div class="container">
+                <span class="section-tag text-center animate-on-scroll fade-in">Capacitação</span>
+                <h2 class="text-center animate-on-scroll fade-in">Nossos Cursos de Formação</h2>
+
+                <div class="cursos-grid">
+                    <div class="curso-card animate-on-scroll slide-in-up" style="--delay: 0.1s;">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Auxiliar Administrativo</h3>
+                        <p>Rotinas de escritório, atendimento, organização de documentos e suporte à gestão.</p>
+                    </div>
+                    <div class="curso-card animate-on-scroll slide-in-up" style="--delay: 0.2s;">
+                        <i class="fas fa-box-open"></i>
+                        <h3>Auxiliar de Logística</h3>
+                        <p>Controle de estoque, recebimento, expedição e movimentação de mercadorias.</p>
+                    </div>
+                    <div class="curso-card animate-on-scroll slide-in-up" style="--delay: 0.3s;">
+                        <i class="fas fa-shopping-basket"></i>
+                        <h3>Apoio em Logística</h3>
+                        <p>Atendimento ao cliente, operação de caixa, reposição e organização de loja.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="programas-newsletter" id="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <span class="section-tag animate-on-scroll fade-in">Fique por Dentro</span>
+                        <h2 class="animate-on-scroll fade-in" style="--delay: 0.1s">Não Perca Nenhuma Vaga</h2>
+                        <p class="animate-on-scroll fade-in" style="--delay: 0.2s;">Cadastre-se para receber novas
+                            oportunidades, dicas de carreira e novidades da APIT direto no seu e-mail.</p>
+                    </div>
+
+                    <form class="newsletter-form animate-on-scroll fade-in" style="--delay: 0.3s;"
+                        action="https://assets.mailerlite.com/jsonp/1905511/forms/170950368390284581/subscribe"
+                        data-code="" method="post" target="_blank">
+
+                        <div class="form-group">
+                            <label for="newsletter-name" class="sr-only">Nome</label>
+                            <input type="text" id="newsletter-name" name="fields[name]" placeholder="Seu nome"
+                                autocomplete="given-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="newsletter-email" class="sr-only">E-mail</label>
+                            <input type="email" id="newsletter-email" name="fields[email]" placeholder="Seu E-mail"
+                                autocomplete="email" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Inscreva-se!</button>
+
+                        <input type="hidden" name="ml-submit" value="1">
+                        <input type="hidden" name="anticsrf" value="true">
+                    </form>
+                    <p class="newsletter-privacy animate-on-scroll fade-in" style="--delay: 0.4s;">
+                        Respeitamos sua privacidade. Consulte nossa <a href="politica.html" target="_blank">Política de
+                            Privacidade</a>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container-new">
+
+            <div class="footer-col-white">
+                <img src="imagens/LOGO-APIT_Transparente (003).png" alt="Logo APIT" class="footer-logo">
+
+                <p class="footer-text-line1">Associação Promotora de Instrução e Trabalho</p>
+                <hr class="footer-divider">
+                <p class="footer-text-line2">Transformando vidas pela educação e trabalho.</p>
+            </div>
+
+            <div class="footer-col-blue">
+                <div class="footer-grid-blue">
+
+                    <div class="footer-col">
+                        <h4>Navegação</h4>
+                        <ul>
+                            <li><a href="#quem-somos">Quem Somos</a></li>
+                            <li><a href="programas.html">Programas</a></li>
+                            <li><a href="aprendiz.html">Seja Aprendiz</a></li>
+                            <li><a href="empresas.html">Para Empresas</a></li>
+                            <li><a href="ajuda.html">Central de Ajuda</a></li>
+                            <li><a href="politica.html">Política de privacidade</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Contato</h4>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> Rua Natanael Tito Salmon, 42 - Osasco/SP</li>
+                            <li><i class="fas fa-phone"></i> (11) 93097-2750</li>
+                            <li><i class="fas fa-envelope"></i> contato@apitaprendiz.org.br</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Siga-nos</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/APITaprendiz/?ref=hl#" aria-label="Facebook"
+                                target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/apit.aprendiz/" aria-label="Instagram" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/apit-aprendiz?_l=pt_BR" aria-label="LinkedIn"
+                                target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>2026 © APIT. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="fixed-social-icons">
+        <a href="https://www.facebook.com/APITaprendiz/?ref=hl#" aria-label="Facebook" target="_blank"><i
+                class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/apit.aprendiz/" aria-label="Instagram" target="_blank"><i
+                class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/apit-aprendiz?_l=pt_BR" aria-label="LinkedIn" target="_blank"><i
+                class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.youtube.com/channel/UCdPeTQpDNFk_StkOnEjNTAw" aria-label="YouTube" target="_blank"><i
+                class="fab fa-youtube"></i></a>
+    </div>
+
+    <div class="fixed-donation-bar">
+        <p>Como posso ajudar a APIT?!</p>
+        <a href="doe.html" class="btn btn-donation">SAIBA MAIS</a>
+    </div>
+
+    <a href="https://wa.me/5511930972750" class="floating-wpp" target="_blank" aria-label="Fale Conosco pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <script async src="https://cse.google.com/cse.js?cx=b07272153e4844bbb"></script>
+    <script src="js/programas.js"></script>
+    <script src="js/lupa.js"></script>
+</body>
+
+</html>

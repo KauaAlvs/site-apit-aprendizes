@@ -1,0 +1,1663 @@
+/* ================================== */
+/* CSS AUTÔNOMO - PÁGINA PROGRAMAS
+/* TEMA: VERDE
+/* ================================== */
+
+/* ---------------------------------- */
+/* 1. VARIÁVEIS E RESET GLOBAL
+/* ---------------------------------- */
+
+:root {
+    /* Paleta Vibrante */
+    --color-primary-blue: #005A9C;
+    --color-secondary-green: #34A853;
+    --color-accent-yellow: #FFBF00;
+    --color-accent-red: #EA4335;
+    --color-accent-purple: #7928CA;
+
+    --color-text-dark: #333333;
+    --color-text-light: #FFFFFF;
+    --color-bg-light: #FFFFFF;
+    --color-bg-grey: #f7f9fc;
+    /* Cinza mais suave */
+
+    --font-main: 'Poppins', sans-serif;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.05);
+    /* Sombra baseada no Verde */
+    --shadow-medium: 0 8px 25px rgba(52, 168, 83, 0.1);
+    --border-radius: 12px;
+    --transition-fast: 0.2s ease-in-out;
+    --transition-premium: 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: var(--color-accent-yellow);
+    color: var(--color-text-dark);
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+    /* 16px */
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--color-text-dark);
+    line-height: 1.7;
+    background-color: var(--color-bg-grey);
+    overflow-x: hidden;
+    /* Garante que não haverá scroll horizontal */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    word-wrap: break-word;
+    /* Garante que títulos longos quebrem a linha */
+}
+
+h1 {
+    font-size: 2.2rem;
+    /* Ajustado para mobile */
+}
+
+h2 {
+    font-size: 1.8rem;
+    /* Ajustado para mobile */
+}
+
+h3 {
+    font-size: 1.1rem;
+    /* Ajustado para mobile */
+}
+
+/* Destaques de texto coloridos (TEMA VERDE) */
+.highlight-yellow {
+    color: var(--color-accent-yellow);
+}
+
+.highlight-green {
+    color: var(--color-secondary-green);
+}
+
+.highlight-red {
+    color: var(--color-accent-red);
+}
+
+.highlight-blue {
+    color: var(--color-secondary-green);
+    /* <<< MUDANÇA: Azul vira Verde */
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-tag {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-secondary-green);
+    /* <<< MUDANÇA: Amarelo vira Verde */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+/* Classe utilitária para acessibilidade (Esconde visualmente) */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* ---------------------------------- */
+/* 2. COMPONENTES (BOTÕES, CARDS, POPUP) (TEMA VERDE) */
+/* ---------------------------------- */
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+/* <<< MUDANÇA: Botão primário agora é VERDE */
+.btn-primary {
+    background-color: var(--color-secondary-green);
+    color: var(--color-text-light);
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #2a8a44;
+    /* Verde mais escuro */
+    transition: 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.btn-primary:hover::before {
+    width: 100%;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-text-light);
+    border: 2px solid var(--color-text-light);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-text-light);
+    color: var(--color-secondary-green);
+    /* Hover para verde */
+}
+
+/* <<< MUDANÇA: Link padrão VERDE */
+.btn-link {
+    font-weight: 600;
+    color: var(--color-secondary-green);
+    transition: var(--transition-fast);
+}
+
+.btn-link:hover {
+    color: var(--color-accent-red);
+    letter-spacing: 0.5px;
+}
+
+.btn-link i {
+    font-size: 0.8em;
+    margin-left: 4px;
+}
+
+.card {
+    background-color: var(--color-bg-light);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-light);
+    transition: var(--transition-fast);
+    height: 100%;
+}
+
+.card:hover {
+    box-shadow: var(--shadow-medium);
+    transform: scale(1.03);
+}
+
+/* ---------------------------------- */
+/* 3. HEADER E NAVEGAÇÃO
+/* ---------------------------------- */
+
+.header {
+    background-color: var(--color-bg-light);
+    width: 100%;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-light);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo img {
+    height: 50px;
+    /* Reduzido para mobile */
+    width: auto;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-icon {
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-primary-blue);
+    transition: var(--transition-fast);
+}
+
+.search-icon:hover {
+    color: var(--color-accent-red);
+}
+
+.mobile-menu-toggle {
+    display: block;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-primary-blue);
+}
+
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 82px;
+    /* Altura do header (50px logo + 32px padding) */
+    left: 0;
+    width: 100%;
+    background-color: var(--color-bg-light);
+    box-shadow: var(--shadow-medium);
+    padding: 1rem 0;
+}
+
+.nav-menu.active {
+    display: block;
+}
+
+.nav-list {
+    flex-direction: column;
+}
+
+.nav-list li {
+    text-align: center;
+    margin: 0.5rem 0;
+    /* Ajustado para mobile */
+}
+
+.nav-link {
+    font-weight: 600;
+    color: var(--color-primary-blue);
+    padding: 0.75rem 1rem;
+    /* Padding aumentado para toque */
+    position: relative;
+    transition: var(--transition-fast);
+    border-radius: 8px;
+    /* Borda arredondada para o hover */
+    margin: 0 1rem;
+    /* Margem para o hover não colar nas bordas */
+    display: block;
+    /* Garante que o link ocupe a área */
+}
+
+/* <<< MUDANÇA: Link "Programas" ativo no mobile */
+.nav-list li:nth-child(2) a.nav-link {
+    color: var(--color-text-light);
+    background-color: var(--color-secondary-green);
+}
+
+.nav-link:hover {
+    color: var(--color-text-light);
+    background-color: var(--color-secondary-green);
+    /* <<< MUDANÇA: Hover verde */
+}
+
+/* ---------------------------------- */
+/* 4. BUSCA OVERLAY (de lupa.css)
+/* ---------------------------------- */
+.search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 51, 102, 0.95);
+    /* Azul primário com transparência */
+    z-index: 1999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.search-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.search-overlay-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 3rem;
+    color: var(--color-text-light);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.search-overlay-close:hover {
+    transform: rotate(90deg);
+    color: var(--color-accent-red);
+}
+
+.search-overlay-content {
+    width: 90%;
+    max-width: 700px;
+}
+
+.overlay-search-form {
+    display: flex;
+    width: 100%;
+    border-bottom: 3px solid var(--color-accent-yellow);
+}
+
+#overlay-search-input {
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--color-text-light);
+    font-family: var(--font-main);
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+#overlay-search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300;
+}
+
+.overlay-search-form button {
+    background: transparent;
+    border: none;
+    color: var(--color-accent-yellow);
+    font-size: 1.5rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+
+/* ---------------------------------- */
+/* 5. SEÇÕES (ESTILOS PÁGINA PROGRAMAS) */
+/* ---------------------------------- */
+
+main {
+    padding-top: 82px;
+    /* Altura do header mobile */
+}
+
+/* Divisor de Seção (REMOVIDO) */
+.shape-divider {
+    display: none;
+}
+
+/* --- Hero Section (Verde - ALTERADO) --- */
+.hero-programas {
+    /* === ALTERAÇÃO: Fundo de Imagem === */
+    /* TROQUE A IMAGEM AQUI */
+    background-image: linear-gradient(rgba(20, 70, 40, 0.75), rgba(20, 70, 40, 0.75)), url('../imagens/hero-programas.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: var(--color-text-light);
+    padding: 5rem 0;
+    text-align: center;
+    position: relative;
+}
+
+.hero-programas h1 {
+    font-size: 2.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-programas p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    /* Aumenta margem inferior */
+}
+
+/* === NOVO: Wrapper dos Botões do Hero === */
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    /* Empilha no mobile */
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* --- Intro Section --- */
+.programas-intro {
+    padding: 4rem 0 2rem;
+    background: var(--color-bg-light);
+    /* Fundo branco */
+}
+
+.programas-intro .container {
+    max-width: 800px;
+}
+
+.programas-intro h2 {
+    color: var(--color-primary-blue);
+}
+
+.programas-intro .intro-text {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+
+/* --- Seção Público-Alvo (ABAS) --- */
+.programas-publico {
+    padding: 2rem 0 4rem;
+    background: var(--color-bg-light);
+}
+
+/* Navegação das Abas */
+.publico-tab-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.publico-tab-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: var(--font-main);
+    color: var(--color-text-dark);
+    padding: 1rem 1.5rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+    /* Para a borda sobrepor a linha */
+    border-bottom: 3px solid transparent;
+    transition: all var(--transition-fast);
+}
+
+.publico-tab-btn i {
+    color: var(--color-text-dark);
+    transition: all var(--transition-fast);
+}
+
+.publico-tab-btn.active {
+    color: var(--color-secondary-green);
+    border-bottom-color: var(--color-secondary-green);
+}
+
+.publico-tab-btn.active i {
+    color: var(--color-secondary-green);
+}
+
+.publico-tab-btn:hover:not(.active) {
+    color: var(--color-primary-blue);
+}
+
+.publico-tab-btn:hover:not(.active) i {
+    color: var(--color-primary-blue);
+}
+
+/* Conteúdo das Abas */
+.publico-tab-content {
+    position: relative;
+    background: var(--color-bg-grey);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+}
+
+.publico-tab-panel {
+    display: none;
+    opacity: 0;
+    animation: fadeOut 0.4s ease;
+}
+
+.publico-tab-panel.active {
+    display: block;
+    opacity: 1;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+
+
+.panel-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.panel-text h3 {
+    font-size: 1.5rem;
+    color: var(--color-primary-blue);
+}
+
+.panel-text p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.beneficios-lista {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.beneficios-lista li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: var(--color-bg-light);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+}
+
+.beneficios-lista i {
+    margin-top: 5px;
+    /* Alinha o check-circle */
+    color: var(--color-secondary-green);
+}
+
+.panel-cta {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #ddd;
+}
+
+
+/* --- Seção Cursos --- */
+.programas-cursos {
+    padding: 4rem 0;
+    background-color: var(--color-bg-grey);
+}
+
+.cursos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.curso-card {
+    background-color: var(--color-bg-light);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    transition: all var(--transition-fast);
+    border-left: 5px solid var(--color-secondary-green);
+}
+
+.curso-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+    border-left-width: 10px;
+}
+
+.curso-card i {
+    font-size: 2.5rem;
+    color: var(--color-secondary-green);
+    margin-bottom: 1rem;
+    transition: all var(--transition-fast);
+}
+
+.curso-card:hover i {
+    transform: scale(1.1);
+}
+
+.curso-card h3 {
+    color: var(--color-primary-blue);
+    font-size: 1.25rem;
+}
+
+/* --- 8. FAIXA CTA APRENDIZ --- */
+.section-join-banner {
+    background-color: var(--color-secondary-green);
+    /* Fundo verde com padrão sutil */
+    background-image: repeating-linear-gradient(-45deg,
+            rgba(0, 0, 0, 0.05),
+            rgba(0, 0, 0, 0.05) 1px,
+            transparent 1px,
+            transparent 10px);
+    color: var(--color-text-light);
+    padding: 3rem 0;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+
+    /* Bordas Pretas REMOVIDAS */
+    background-size: 150% 150%;
+    animation: breathing-background 12s ease-in-out infinite alternate;
+}
+
+/* Animação de fundo */
+@keyframes breathing-background {
+    from {
+        background-position: 0% 0%;
+    }
+
+    to {
+        background-position: 100% 100%;
+    }
+}
+
+.join-banner-content {
+    display: flex;
+    flex-direction: column;
+    /* Mobile: Imagem em cima, texto embaixo */
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.join-banner-image {
+    max-width: 200px;
+    /* Limita o PNG no mobile */
+}
+
+.join-banner-image img {
+    width: 100%;
+    height: auto;
+}
+
+.join-banner-text-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.join-banner-text h2 {
+    font-size: 2rem;
+    /* Tamanho maior */
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: var(--color-text-light);
+    /* Garante texto branco */
+}
+
+.join-banner-text p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+.join-banner-cta .btn-secondary {
+    border: 2px solid var(--color-text-light);
+    color: var(--color-text-light);
+    background-color: transparent;
+    padding: 0.8rem 2rem;
+    /* Botão mais chamativo */
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.join-banner-cta .btn-secondary:hover {
+    background-color: var(--color-text-light);
+    color: var(--color-secondary-green);
+    /* Trocamos para o verde da página */
+    border-color: var(--color-text-light);
+}
+
+/* ---------------------------------- */
+/* 9. NOVA SEÇÃO NEWSLETTER
+/* ---------------------------------- */
+.programas-newsletter {
+    padding: 4rem 0;
+    background-color: var(--color-primary-blue);
+    /* Fundo azul */
+    color: var(--color-text-light);
+}
+
+.newsletter-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.newsletter-text .section-tag {
+    color: var(--color-accent-yellow);
+    /* Tag amarela no fundo azul */
+}
+
+.newsletter-text h2 {
+    color: var(--color-text-light);
+    font-size: 2rem;
+}
+
+.newsletter-text p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.newsletter-form .form-group {
+    margin-bottom: 0;
+}
+
+.newsletter-form input[type="text"],
+.newsletter-form input[type="email"] {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-bg-light);
+    border-radius: 8px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    width: 100%;
+}
+
+.newsletter-form input[type="text"]:focus,
+.newsletter-form input[type="email"]:focus {
+    outline: none;
+    border-color: var(--color-accent-yellow);
+    box-shadow: 0 0 0 3px rgba(255, 191, 0, 0.3);
+}
+
+/* Botão da newsletter (amarelo) */
+.newsletter-form .btn {
+    padding: 0.9rem;
+    font-size: 1rem;
+    background-color: var(--color-accent-yellow);
+    color: var(--color-text-dark);
+}
+
+.newsletter-form .btn-primary::before {
+    background: #e6ac00;
+    /* Amarelo escuro */
+}
+
+.newsletter-form .btn:hover {
+    background-color: #ffce3d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter-privacy {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.newsletter-privacy a {
+    color: var(--color-text-light);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.newsletter-privacy a:hover {
+    color: var(--color-accent-yellow);
+}
+
+
+/* ---------------------------------- */
+/* 10. BOTÃO WHATSAPP E RODAPÉ (TEMA VERDE) */
+/* ---------------------------------- */
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+
+    70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+.floating-wpp {
+    position: fixed;
+    bottom: 20px;
+    /* Ajustado para mobile */
+    right: 20px;
+    /* Ajustado para mobile */
+    width: 55px;
+    /* Reduzido para mobile */
+    height: 55px;
+    /* Reduzido para mobile */
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    /* Reduzido para mobile */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 998;
+    animation: pulse 2s infinite;
+    transition: var(--transition-fast);
+}
+
+.floating-wpp:hover {
+    animation-play-state: paused;
+    transform: scale(1.15);
+}
+
+/* === INÍCIO DO RODAPÉ (TEMA VERDE) === */
+/* Esta seção foi copiada do css/flutuante.css e TEMATIZADA */
+.footer {
+    background-color: var(--color-secondary-green);
+    /* <<< MUDANÇA: Fundo VERDE */
+    color: var(--color-text-light);
+    /* Texto base agora é BRANCO */
+    padding: 3rem 0 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* Novo container flex para o rodapé */
+.footer-container-new {
+    display: flex;
+    flex-direction: column;
+    /* Empilha no mobile */
+    gap: 2rem;
+}
+
+/* Coluna Branca (Esquerda) */
+.footer-col-white {
+    background-color: var(--color-bg-light);
+    color: var(--color-text-dark);
+    /* Texto escuro no fundo branco */
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    margin: 0 1rem;
+    /* Margem para "flutuar" no mobile */
+}
+
+.footer-col-white .footer-logo {
+    height: 70px;
+    /* Reduzido para mobile */
+    width: auto;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilos para o novo texto */
+.footer-text-line1 {
+    font-weight: 600;
+    color: var(--color-text-dark);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.footer-divider {
+    border: none;
+    height: 2px;
+    background-color: var(--color-secondary-green);
+    /* <<< MUDANÇA: Divisor Verde */
+    width: 50px;
+    margin: 1rem 0;
+}
+
+.footer-text-line2 {
+    font-weight: 700;
+    color: var(--color-secondary-green);
+    /* <<< MUDANÇA: Destaque Verde */
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+/* Coluna Verde (Direita) - Contém o grid */
+.footer-col-blue {
+    /* A classe mantém o nome, mas o fundo é o do .footer */
+    padding: 0 1rem;
+    /* Padding para espaçar no mobile */
+}
+
+.footer-grid-blue {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* 1 coluna no mobile */
+    gap: 2rem;
+}
+
+/* Estilos gerais das colunas (reutilizados) */
+.footer-col h4 {
+    color: var(--color-text-light);
+    /* Títulos brancos */
+    margin-bottom: 1rem;
+    position: relative;
+    font-size: 1.3rem;
+}
+
+.footer-col h4::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: var(--color-accent-yellow);
+    margin-top: 0.25rem;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    display: flex;
+    /* <-- Força o alinhamento em linha */
+    align-items: flex-start;
+    /* <-- Alinha o ícone no topo do texto */
+    line-height: 1.6;
+    /* <-- Melhora o espaçamento do texto que quebra a linha */
+}
+
+.footer-col ul a,
+.footer-col ul span {
+    color: var(--color-text-light);
+    /* Links brancos */
+    transition: var(--transition-fast);
+}
+
+.footer-col ul a:hover {
+    color: var(--color-accent-yellow);
+}
+
+.footer-col ul i {
+    margin-right: 0.75rem;
+    /* <-- Aumentei um pouco o espaço */
+    width: 20px;
+    flex-shrink: 0;
+    /* <-- Impede o ícone de encolher */
+    text-align: center;
+    margin-top: 4px;
+    /* <-- Alinha o ícone verticalmente com o texto */
+}
+
+.social-links {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-text-light);
+    /* Ícones brancos */
+    border-radius: 50%;
+    transition: var(--transition-fast);
+    font-size: 1.1rem;
+}
+
+.social-links a:hover {
+    background-color: var(--color-accent-yellow);
+    color: var(--color-primary-blue);
+}
+
+/* Copyright (Separado) */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 3rem;
+    /* Espaçamento do conteúdo de cima */
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    /* Texto do copyright branco */
+}
+
+/* === FIM DA MUDANÇA NO RODAPÉ === */
+
+/* ---------------------------------- */
+/* 11. ESTILOS DO GOOGLE SEARCH (NOVO) */
+/* ---------------------------------- */
+
+/* Esconde a caixa de busca original do Google */
+.gcse-search {
+    display: none;
+}
+
+.search-overlay-content .gsc-control-cse {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.search-overlay-content form.gsc-search-box {
+    margin-bottom: 0;
+}
+
+.search-overlay-content table.gsc-search-box {
+    margin-bottom: 0;
+}
+
+.search-overlay-content .gsc-search-box-tools .gsc-search-box .gsc-input {
+    padding: 0;
+}
+
+.search-overlay-content input.gsc-input,
+.search-overlay-content input.gsc-input:focus {
+    background: transparent !important;
+    border: none !important;
+    color: var(--color-text-light) !important;
+    font-family: var(--font-main) !important;
+    font-size: 1.5rem !important;
+    padding: 1rem 0 !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    width: 100% !important;
+}
+
+.search-overlay-content input.gsc-input::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.search-overlay-content .gsc-search-button,
+.search-overlay-content .gsc-search-button:hover,
+.search-overlay-content .gsc-search-button:focus {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 0 0 0.5rem !important;
+    margin-left: 0;
+}
+
+.search-overlay-content .gsc-search-button-v2,
+.search-overlay-content .gsc-search-button-v2:hover,
+.search-overlay-content .gsc-search-button-v2:focus {
+    padding: 0 0 0 0.5rem !important;
+    margin: 0 !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.search-overlay-content .gsc-search-button-v2 svg {
+    fill: var(--color-accent-yellow) !important;
+    width: 22px;
+    height: 22px;
+}
+
+
+/* ---------------------------------- */
+/* 12. ELEMENTOS FIXOS (de flutuante.css)
+/* ---------------------------------- */
+
+/* 1. BARRA DE DOAÇÃO FIXA */
+.fixed-donation-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    border-top: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    z-index: 995;
+}
+
+.fixed-donation-bar p {
+    margin: 0;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    font-size: 0.9rem;
+}
+
+.btn-donation {
+    background-color: var(--color-secondary-green);
+    color: var(--color-text-light);
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    /* Garante que não é sublinhado */
+}
+
+.btn-donation:hover {
+    background-color: #2a8a44;
+}
+
+/* 2. ÍCONES SOCIAIS FIXOS (TEMA VERDE) */
+.fixed-social-icons {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 997;
+    background: rgba(52, 168, 83, 0.8);
+    /* <-- MUDANÇA: Verde */
+    backdrop-filter: blur(5px);
+    border-radius: 8px 0 0 8px;
+    box-shadow: var(--shadow-light);
+}
+
+.fixed-social-icons a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+    transition: var(--transition-fast);
+}
+
+.fixed-social-icons a:hover {
+    background-color: var(--color-accent-yellow);
+    color: var(--color-text-dark);
+}
+
+/* 3. AJUSTES DE ELEMENTOS FLUTUANTES (WPP, VLIBRAS) */
+.floating-wpp {
+    bottom: 80px;
+    /* Sobe 60px para a barra de doação */
+}
+
+div[vw-access-button].active {
+    bottom: 140px !important;
+    /* Sobe 60px (barra) + 60px (WPP) + 20px (espaço) */
+    right: -10px !important;
+    z-index: 999 !important;
+}
+
+/* 4. AJUSTE PADDING DO RODAPÉ */
+.footer {
+    padding-bottom: 60px;
+    /* Altura da barra de doação */
+}
+
+/* ---------------------------------- */
+/* 13. MEDIA QUERIES (DESKTOP)
+/* ---------------------------------- */
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        /* Retorna ao tamanho original no desktop */
+    }
+
+    /* Header Desktop */
+    .header-logo img {
+        height: 70px;
+        /* Logo volta a 70px no desktop */
+    }
+
+    main {
+        padding-top: 102px;
+        /* Padding do desktop (70px + 32px) */
+    }
+
+    .nav-menu {
+        display: block;
+        position: static;
+        width: auto;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+        top: auto;
+        /* Reseta o 'top' do mobile */
+    }
+
+    .mobile-menu-toggle {
+        display: none;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .nav-list li {
+        margin: 0;
+        /* Retorna a margem 0 */
+    }
+
+    /* === MENU DESKTOP (PÍLULA) (TEMA VERDE) === */
+    .nav-link {
+        padding: 0.5rem 1.2rem;
+        /* Padding para o formato pílula */
+        border-radius: 50px;
+        /* Formato pílula */
+        border: 2px solid;
+        /* Borda visível */
+        background: transparent;
+        z-index: 1;
+        overflow: hidden;
+        /* Essencial para o efeito de pintura */
+        margin: 0;
+        /* Remove a margem do mobile */
+        display: inline-block;
+        /* Altera de block para inline-block */
+    }
+
+    .nav-link:hover {
+        background: transparent;
+        /* Garante que o hover do mobile seja removido */
+    }
+
+    /* Efeito de "pintura" */
+    .nav-link::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        z-index: -1;
+        transition: width 0.3s ease-out;
+        background-color: #ccc;
+        /* Cor fallback */
+    }
+
+    .nav-link:hover::before {
+        width: 100%;
+    }
+
+    /* 1: Quem Somos (Azul) */
+    .nav-list li:nth-child(1) a.nav-link {
+        border-color: var(--color-primary-blue);
+        color: var(--color-primary-blue);
+    }
+
+    .nav-list li:nth-child(1) a.nav-link::before {
+        background-color: var(--color-primary-blue);
+    }
+
+    .nav-list li:nth-child(1) a.nav-link:hover {
+        color: var(--color-text-light);
+    }
+
+    /* 2: Programas (Verde) - ATIVO */
+    .nav-list li:nth-child(2) a.nav-link {
+        border-color: var(--color-secondary-green);
+        color: var(--color-text-light);
+        background-color: var(--color-secondary-green);
+    }
+
+    .nav-list li:nth-child(2) a.nav-link::before {
+        background-color: var(--color-secondary-green);
+        width: 100%;
+        /* << PÍLULA ATIVA */
+    }
+
+    .nav-list li:nth-child(2) a.nav-link:hover {
+        color: var(--color-text-light);
+    }
+
+    /* 3: Seja Aprendiz (ROXO) */
+    .nav-list li:nth-child(3) a.nav-link {
+        border-color: var(--color-accent-purple);
+        color: var(--color-accent-purple);
+    }
+
+    .nav-list li:nth-child(3) a.nav-link::before {
+        background-color: var(--color-accent-purple);
+    }
+
+    .nav-list li:nth-child(3) a.nav-link:hover {
+        color: var(--color-text-light);
+    }
+
+    /* 4: Para Empresas (Vermelho) */
+    .nav-list li:nth-child(4) a.nav-link {
+        border-color: var(--color-accent-red);
+        color: var(--color-accent-red);
+    }
+
+    .nav-list li:nth-child(4) a.nav-link::before {
+        background-color: var(--color-accent-red);
+    }
+
+    .nav-list li:nth-child(4) a.nav-link:hover {
+        color: var(--color-text-light);
+    }
+
+    /* 5: Central de Ajuda (Amarelo) */
+    .nav-list li:nth-child(5) a.nav-link {
+        border-color: var(--color-accent-yellow);
+        color: var(--color-accent-yellow);
+    }
+
+    .nav-list li:nth-child(5) a.nav-link::before {
+        background-color: var(--color-accent-yellow);
+    }
+
+    .nav-list li:nth-child(5) a.nav-link:hover {
+        color: var(--color-text-dark);
+    }
+
+    /* === FIM DA MUDANÇA (MENU DESKTOP "PÍLULA") === */
+
+    /* Hero Desktop */
+    .hero-programas {
+        padding: 7rem 0;
+        /* Aumentado */
+    }
+
+    /* NOVO: Botões do Hero lado a lado */
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .hero-programas h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-programas p {
+        font-size: 1.25rem;
+    }
+
+    /* Busca Desktop */
+    .search-overlay-content input.gsc-input,
+    .search-overlay-content input.gsc-input:focus {
+        font-size: 2.5rem !important;
+        /* Fonte maior no desktop */
+    }
+
+    .search-overlay-content .gsc-search-button-v2 svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Layout de Abas - Desktop */
+    .publico-tab-btn {
+        font-size: 1.25rem;
+    }
+
+    .panel-layout {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+    .publico-tab-content {
+        padding: 3rem;
+    }
+
+    .panel-cta {
+        text-align: left;
+    }
+
+    /* Grid de 3 colunas para Cursos (CORRIGIDO) */
+    .cursos-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /* ------Faixa CTA Aprendiz Desktop -----*/
+    .section-join-banner {
+        padding: 2rem 0;
+    }
+
+    .join-banner-content {
+        flex-direction: row;
+        /* Desktop: Lado a Lado */
+        justify-content: space-between;
+        text-align: left;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .join-banner-image {
+        flex: 1;
+        max-width: 250px;
+    }
+
+    .join-banner-text-cta {
+        flex: 2;
+        flex-direction: row;
+        /* Texto e botão lado a lado */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .join-banner-text h2 {
+        font-size: 2.2rem;
+    }
+
+    /* Newsletter Desktop - NOVO */
+    .newsletter-text {
+        text-align: left;
+    }
+
+    .newsletter-content {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        text-align: left;
+        max-width: 1100px;
+        /* Alinha com o container */
+    }
+
+    .newsletter-form {
+        flex-direction: row;
+        align-items: center;
+        flex-grow: 1;
+        min-width: 500px;
+    }
+
+    .newsletter-form .form-group {
+        flex-grow: 1;
+    }
+
+    .newsletter-form .btn {
+        flex-shrink: 0;
+    }
+
+    .newsletter-privacy {
+        text-align: left;
+        margin-top: 1.5rem;
+    }
+
+    .newsletter-text h2 {
+        font-size: 2.2rem;
+    }
+
+    /* Rodapé Desktop */
+    .footer {
+        padding-top: 4rem;
+        /* Padding no topo */
+    }
+
+    .footer-container-new {
+        flex-direction: row;
+        /* Lado a lado no desktop */
+        align-items: stretch;
+        /* Estica as colunas para terem a mesma altura */
+        gap: 3rem;
+        /* Espaço entre a coluna branca e a azul */
+        padding-bottom: 4rem;
+        /* Espaço antes do copyright */
+    }
+
+    .footer-col-white {
+        flex: 0 0 30%;
+        /* Coluna branca com 30% da largura */
+        margin: 0;
+        /* Remove margem do mobile */
+        padding: 2.5rem;
+    }
+
+    .footer-col-white .footer-logo {
+        height: 70px;
+    }
+
+    .footer-col-blue {
+        flex: 1;
+        /* Ocupa o resto do espaço */
+        padding: 0;
+        /* Remove padding do mobile */
+    }
+
+    .footer-grid-blue {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 colunas */
+    }
+
+    .footer-col h4 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-col ul li {
+        margin-bottom: 0.75rem;
+        font-size: 0.95rem;
+    }
+
+    .social-links {
+        margin-top: 0;
+    }
+
+    .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
+    }
+
+    .footer-bottom {
+        margin-top: 0;
+        padding: 2.5rem 0;
+        font-size: 0.9rem;
+    }
+
+    /* Ajustes flutuantes para desktop */
+    .fixed-donation-bar {
+        flex-direction: row;
+        gap: 1.5rem;
+        padding: 0.75rem 1rem;
+        height: 70px;
+    }
+
+    .fixed-donation-bar p {
+        font-size: 1rem;
+    }
+
+    .btn-donation {
+        padding: 0.75rem 1.75rem;
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        padding-bottom: 70px;
+        /* Altura da barra no desktop */
+    }
+
+    .floating-wpp {
+        bottom: 90px;
+        /* 20px + 70px da barra */
+    }
+
+    div[vw-access-button].active {
+        bottom: 165px !important;
+        /* 90px do WPP + 55px (altura WPP) + 20px espaço */
+    }
+
+    .fixed-social-icons a {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* O grid de 3 colunas já foi definido em 768px */
+}

@@ -1,0 +1,132 @@
+/* ---------------------------------- */
+/* 12. ELEMENTOS FIXOS (DOAÇÃO E SOCIAL) */
+/* ---------------------------------- */
+
+/* 1. BARRA DE DOAÇÃO FIXA */
+.fixed-donation-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    /* Cor similar ao ESPRO */
+    border-top: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+    /* Padding mobile */
+    display: flex;
+    flex-direction: column;
+    /* Empilha no mobile */
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    /* Espaço mobile */
+    z-index: 995;
+    /* Acima do conteúdo, abaixo dos botões flutuantes */
+}
+
+.fixed-donation-bar p {
+    margin: 0;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    font-size: 0.9rem;
+}
+
+.btn-donation {
+    background-color: #34A853;
+    color: var(--color-text-light);
+    padding: 0.5rem 1rem;
+    /* Botão menor */
+    font-size: 0.8rem;
+}
+
+.btn-donation:hover {
+    background-color: green;
+    /* Verde mais escuro no hover */
+}
+
+/* 2. ÍCONES SOCIAIS FIXOS */
+.fixed-social-icons {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 997;
+    /* Abaixo do WPP e VLibras */
+    background: #34A853;
+    /* Azul com transparência */
+    backdrop-filter: blur(5px);
+    border-radius: 8px 0 0 8px;
+    box-shadow: var(--shadow-light);
+}
+
+.fixed-social-icons a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+    transition: var(--transition-fast);
+}
+
+.fixed-social-icons a:hover {
+    background-color: var(--color-accent-yellow);
+    color: var(--color-text-dark);
+}
+
+/* 3. AJUSTES DE ELEMENTOS FLUTUANTES */
+
+/* Ajusta o VLibras para subir (Mobile e Desktop) */
+div[vw-access-button].active {
+    bottom: 140px !important;
+    /* Padrão era ~20px. Sobe (60px da barra) + (60px do WPP) + (20px espaço) */
+    right: -9px !important;
+    z-index: 999 !important;
+    /* Garante que fique no topo */
+}
+
+/* Media query para ajustar a barra de doação e flutuantes no Desktop */
+@media (min-width: 768px) {
+    .fixed-donation-bar {
+        flex-direction: row;
+        /* Lado a lado no desktop */
+        gap: 1.5rem;
+        padding: 0.75rem 1rem;
+        height: 70px;
+        /* Altura fixa desktop */
+    }
+
+    .fixed-donation-bar p {
+        font-size: 1rem;
+    }
+
+    .btn-donation {
+        padding: 0.75rem 1.75rem;
+        /* Botão de volta ao tamanho normal */
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        padding-bottom: 70px;
+        /* Garante o padding da barra no desktop */
+    }
+
+    /* Ajusta WPP e VLibras para a altura da barra no desktop */
+    .floating-wpp {
+        bottom: 90px;
+        /* 20px + 70px da barra */
+    }
+
+    div[vw-access-button].active {
+        bottom: 165px !important;
+        /* 90px do WPP + 55px (altura WPP) + 20px espaço */
+    }
+
+    .fixed-social-icons a {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+}
